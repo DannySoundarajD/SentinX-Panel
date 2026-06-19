@@ -1,0 +1,99 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<channel name="xfce4-panel" version="1.0">
+  <property name="configver" type="int" value="2"/>
+  <property name="plugins" type="empty">
+    <property name="plugin-1" type="string" value="whiskermenu">
+      <property name="button-title" type="string" value="SentinX"/>
+      <property name="show-button-title" type="bool" value="true"/>
+      <property name="show-button-icon" type="bool" value="false"/>
+      <property name="favorites" type="array">
+        <value type="string" value="File Explorer"/>
+        <value type="string" value="Firefox Browser"/>
+        <value type="string" value="Terminal"/>
+        <value type="string" value="VS Code"/>
+        <value type="string" value="Sentinel"/>
+        <value type="string" value="SentinX Settings"/>
+      </property>
+    </property>
+    <property name="plugin-2" type="string" value="separator">
+      <property name="grouping" type="uint" value="1"/>
+    </property>
+    <property name="plugin-4" type="string" value="separator">
+      <property name="expand" type="bool" value="true"/>
+    </property>
+    <property name="plugin-5" type="string" value="systray">
+      <property name="style" type="uint" value="0"/>
+      <property name="known-legacy-items" type="array">
+        <value type="string" value="pulseaudio system tray"/>
+        <value type="string" value="xfce4-power-manager"/>
+      </property>
+    </property>
+    <property name="plugin-7" type="string" value="systray">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-8" type="string" value="separator"/>
+    <property name="plugin-9" type="string" value="pulseaudio">
+      <property name="style" type="uint" value="0"/>
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+      <property name="volume-step" type="int" value="5"/>
+      <property name="show-notifications" type="bool" value="true"/>
+    </property>
+    <property name="plugin-10" type="string" value="separator"/>
+    <property name="plugin-11" type="string" value="battery"/>
+    <property name="plugin-12" type="string" value="separator"/>
+    <property name="plugin-13" type="string" value="clock">
+      <property name="items" type="array">
+        <value type="string" value="17818276021.desktop"/>
+      </property>
+      <property name="digital-format" type="string" value="%I:%M %p"/>
+      <property name="show-seconds" type="bool" value="false"/>
+      <property name="timezone" type="string" value=""/>
+    </property>
+    <property name="plugin-14" type="string" value="separator">
+      <property name="items" type="array">
+        <value type="string" value="17818276022.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-15" type="string" value="actions">
+      <property name="items" type="string" value="+lock-screen,+switch-user,|,+logout,+restart,+shutdown"/>
+      <property name="appearance" type="int" value="0"/>
+    </property>
+    <property name="plugin-16" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="17818276024.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-17" type="string" value="separator"/>
+    <property name="plugin-18" type="string" value="directorymenu">
+      <property name="base-directory" type="string" value="/home/danny"/>
+    </property>
+    <property name="plugin-6" type="string" value="separator"/>
+    <property name="plugin-3" type="string" value="separator">
+      <property name="do-fadeout" type="bool" value="true"/>
+      <property name="log-level" type="int" value="2"/>
+      <property name="log-level-apps" type="int" value="1"/>
+    </property>
+  </property>
+  <property name="panels" type="array">
+    <value type="int" value="1"/>
+    <property name="panel-1" type="empty">
+      <property name="position" type="string" value="p=6;x=960;y=22"/>
+      <property name="size" type="uint" value="42"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="15"/>
+      </property>
+      <property name="nrows" type="uint" value="1"/>
+      <property name="length" type="double" value="100"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="enable-struts" type="bool" value="true"/>
+      <property name="length-adjust" type="bool" value="false"/>
+      <property name="border-width" type="uint" value="0"/>
+      <property name="icon-size" type="uint" value="0"/>
+      <property name="enter-opacity" type="uint" value="100"/>
+      <property name="leave-opacity" type="uint" value="100"/>
+      <property name="mode" type="uint" value="0"/>
+    </property>
+    <property name="dark-mode" type="bool" value="true"/>
+  </property>
+</channel>

@@ -97,6 +97,76 @@ notification_plugin_mark_all_read(GtkWidget *widget, NotificationPlugin *notific
 }
 
 
+static GtkWidget *
+sentinx_center_build(NotificationPlugin *notification_plugin)
+{
+    GtkWidget *paned;
+
+    GtkWidget *left_panel;
+    GtkWidget *right_panel;
+
+    GtkWidget *header;
+    GtkWidget *calendar;
+
+    paned =
+        gtk_paned_new(
+            GTK_ORIENTATION_HORIZONTAL
+        );
+
+    left_panel =
+        gtk_box_new(
+            GTK_ORIENTATION_VERTICAL,
+            10
+        );
+
+    right_panel =
+        gtk_box_new(
+            GTK_ORIENTATION_VERTICAL,
+            10
+        );
+
+    gtk_paned_pack1(
+        GTK_PANED(paned),
+        left_panel,
+        TRUE,
+        FALSE
+    );
+
+    gtk_paned_pack2(
+        GTK_PANED(paned),
+        right_panel,
+        FALSE,
+        FALSE
+    );
+
+    header =
+        gtk_label_new(
+            "SentinX Notifications"
+        );
+
+    gtk_box_pack_start(
+        GTK_BOX(left_panel),
+        header,
+        FALSE,
+        FALSE,
+        10
+    );
+
+    calendar =
+        gtk_calendar_new();
+
+    gtk_box_pack_start(
+        GTK_BOX(right_panel),
+        calendar,
+        FALSE,
+        FALSE,
+        10
+    );
+
+    gtk_widget_show_all(paned);
+
+    return paned;
+}
 GtkWidget *
 notification_plugin_menu_new(NotificationPlugin *notification_plugin) {
   GtkWidget *menu;
@@ -122,26 +192,32 @@ notification_plugin_menu_new(NotificationPlugin *notification_plugin) {
   today_day = g_date_time_get_day_of_year(today);
 
   menu = gtk_menu_new();
-GtkWidget *test_item;
-GtkWidget *test_label;
+GtkWidget *container_item;
+GtkWidget *center_widget;
 
-test_item = gtk_menu_item_new();
+container_item =
+    gtk_menu_item_new();
 
-test_label = gtk_label_new(
-    "SentinX Notification Center"
-);
+center_widget =
+    sentinx_center_build(
+        notification_plugin
+    );
 
 gtk_container_add(
-    GTK_CONTAINER(test_item),
-    test_label
+    GTK_CONTAINER(container_item),
+    center_widget
 );
 
 gtk_menu_shell_append(
     GTK_MENU_SHELL(menu),
-    test_item
+    container_item
 );
 
-gtk_widget_show_all(test_item);
+gtk_widget_show_all(
+    container_item
+);
+
+return menu;
   notify_log_icon_folder = xfce_resource_save_location (XFCE_RESOURCE_CACHE,
                                                         XFCE_NOTIFY_ICON_PATH, TRUE);
   log_icon_size = xfconf_channel_get_int (notification_plugin->channel,

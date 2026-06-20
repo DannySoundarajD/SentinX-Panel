@@ -81,7 +81,7 @@ SettingsDialog::SettingsDialog(Settings* settings, Plugin* plugin) :
 	m_plugin(plugin)
 {
 	// Create dialog window
-	m_window = xfce_titled_dialog_new_with_mixed_buttons(_("Whisker Menu"),
+	m_window = xfce_titled_dialog_new_with_mixed_buttons(_("SentinX"),
 			nullptr,
 			GtkDialogFlags(0),
 			"help-browser", _("_Help"), GTK_RESPONSE_HELP,

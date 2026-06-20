@@ -65,7 +65,7 @@ WhiskerMenu::Window::Window(Settings* settings, Plugin* plugin) :
 	m_window = GTK_WINDOW(gtk_window_new(GTK_WINDOW_TOPLEVEL));
 	gtk_widget_set_name(GTK_WIDGET(m_window), "whiskermenu-window");
 	// Untranslated window title to allow window managers to identify it; not visible to users.
-	gtk_window_set_title(m_window, "Whisker Menu");
+	gtk_window_set_title(m_window, "SentinX");
 #ifdef HAVE_GTK_LAYER_SHELL
 	if (!gtk_layer_is_supported())
 #endif

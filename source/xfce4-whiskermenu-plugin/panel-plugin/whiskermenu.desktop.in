@@ -1,7 +1,7 @@
 [Xfce Panel]
 Type=X-XFCE-PanelPlugin
 Encoding=UTF-8
-Name=Whisker Menu
+Name=SentinX
 Comment=Show a menu to easily access installed applications
 Icon=org.xfce.panel.whiskermenu
 X-XFCE-Module=whiskermenu

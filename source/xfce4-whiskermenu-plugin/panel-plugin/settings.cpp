@@ -64,7 +64,7 @@ Settings::Settings(Plugin* plugin) :
 
 	view_mode(this, "/view-mode", ViewAsList, ViewAsIcons, ViewAsTree),
 
-	default_category(this, "/default-category", CategoryFavorites, CategoryFavorites, CategoryAll),
+	default_category(this, "/default-category", CategoryAll,CategoryAll,CategoryAll),
 
 	recent_items_max(this, "/recent-items-max", 10, 0, 100),
 	favorites_in_recent(this, "/favorites-in-recent", false),
@@ -346,7 +346,7 @@ void Settings::prevent_invalid()
 	// Reset default category if recent is hidden
 	if (!recent_items_max && (default_category == CategoryRecent))
 	{
-		default_category = CategoryFavorites;
+		default_category = CategoryAll;
 	}
 
 	// Prevent empty panel button

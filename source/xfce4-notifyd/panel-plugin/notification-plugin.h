@@ -67,7 +67,11 @@ typedef struct
     GtkWidget       *image;
 
     /* menu widgets */
-    GtkWidget       *do_not_disturb_switch;
+GtkWidget *do_not_disturb_switch;
+
+/* SentinX notification center */
+GtkWidget *popover;
+GtkWidget *center_widget;
 
     /* handlers */
     guint            menu_size_allocate_next_handler;

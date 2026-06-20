@@ -122,7 +122,26 @@ notification_plugin_menu_new(NotificationPlugin *notification_plugin) {
   today_day = g_date_time_get_day_of_year(today);
 
   menu = gtk_menu_new();
+GtkWidget *test_item;
+GtkWidget *test_label;
 
+test_item = gtk_menu_item_new();
+
+test_label = gtk_label_new(
+    "SentinX Notification Center"
+);
+
+gtk_container_add(
+    GTK_CONTAINER(test_item),
+    test_label
+);
+
+gtk_menu_shell_append(
+    GTK_MENU_SHELL(menu),
+    test_item
+);
+
+gtk_widget_show_all(test_item);
   notify_log_icon_folder = xfce_resource_save_location (XFCE_RESOURCE_CACHE,
                                                         XFCE_NOTIFY_ICON_PATH, TRUE);
   log_icon_size = xfconf_channel_get_int (notification_plugin->channel,

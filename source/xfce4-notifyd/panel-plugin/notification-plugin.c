@@ -74,9 +74,9 @@ cb_button_pressed (GtkButton *button,
                    GdkEventButton *event,
                    NotificationPlugin *notification_plugin)
 {
- if (event->button == 1 && !gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (button)))
+if (event->button == 1)
 {
-    sentinx_notification_center_show();
+    notification_plugin_popup_menu(notification_plugin);
     return TRUE;
 }
 

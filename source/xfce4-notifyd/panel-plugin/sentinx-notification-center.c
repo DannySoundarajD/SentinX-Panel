@@ -1,7 +1,34 @@
 #include "sentinx-notification-center.h"
+#include <xfconf/xfconf.h>
 
 static GtkWidget *window = NULL;
+gboolean
+sentinx_toggle_dnd(
+    GtkSwitch *widget,
+    gboolean state,
+    gpointer data
 
+)
+{
+    XfconfChannel *channel;
+
+
+    channel =
+        xfconf_channel_get(
+            "xfce4-notifyd"
+        );
+
+xfconf_channel_set_bool(
+    channel,
+    "/do-not-disturb",
+    state
+);
+    g_print(
+        "DND -> %s\n",
+        !state ? "ON" : "OFF"
+    );
+return FALSE;
+}
 static gboolean
 on_window_delete(GtkWidget *widget,
                  GdkEvent *event,
@@ -98,7 +125,9 @@ GtkWidget *sentinx_notification_center_widget(void)
     GtkWidget *notif_box;
 
     GtkWidget *footer;
-    GtkWidget *btn_dnd;
+GtkWidget *dnd_row;
+GtkWidget *dnd_label;
+GtkWidget *dnd_switch;
     GtkWidget *btn_clear;
 
     GtkWidget *card;
@@ -248,18 +277,50 @@ gtk_paned_set_position(
         10
     );
 
-    btn_dnd = gtk_button_new_with_label(
-        "DND"
+dnd_row =
+    gtk_box_new(
+        GTK_ORIENTATION_HORIZONTAL,
+        10
     );
 
-    gtk_box_pack_start(
-        GTK_BOX(footer),
-        btn_dnd,
-        FALSE,
-        FALSE,
-        5
+dnd_label =
+    gtk_label_new(
+        "Do Not Disturb"
     );
 
+dnd_switch =
+    gtk_switch_new();
+
+g_signal_connect(
+    dnd_switch,
+    "state-set",
+    G_CALLBACK(sentinx_toggle_dnd),
+    NULL
+);
+
+gtk_box_pack_start(
+    GTK_BOX(dnd_row),
+    dnd_label,
+    FALSE,
+    FALSE,
+    0
+);
+
+gtk_box_pack_end(
+    GTK_BOX(dnd_row),
+    dnd_switch,
+    FALSE,
+    FALSE,
+    0
+);
+
+gtk_box_pack_start(
+    GTK_BOX(footer),
+    dnd_row,
+    FALSE,
+    FALSE,
+    5
+);
     btn_clear = gtk_button_new_with_label(
         "Clear All"
     );

@@ -49,6 +49,12 @@ static void cb_menu_selection_done(GtkMenuShell *menu,
 
 static void notification_plugin_init_log_proxy(NotificationPlugin *notification_plugin);
 
+static gboolean
+sentinx_window_focus_out(
+    GtkWidget *widget,
+    GdkEvent *event,
+    NotificationPlugin *notification_plugin);
+
 static void
 notification_plugin_popup_menu(
     NotificationPlugin *notification_plugin)
@@ -75,6 +81,13 @@ notification_plugin_popup_menu(
         GTK_WINDOW(window),
         GDK_WINDOW_TYPE_HINT_POPUP_MENU
     );
+    
+    g_signal_connect(
+    window,
+    "focus-out-event",
+    G_CALLBACK(sentinx_window_focus_out),
+    notification_plugin
+);
 
     content =
         sentinx_notification_center_widget();
@@ -92,6 +105,10 @@ notification_plugin_popup_menu(
 
     gtk_widget_show_all(window);
 
+    gtk_window_present(
+    GTK_WINDOW(window)
+);
+
     screen = gdk_screen_get_default();
 
     screen_width =
@@ -107,6 +124,21 @@ notification_plugin_popup_menu(
     notification_plugin->dropdown_open = TRUE;
 
     g_print("SENTINX WINDOW SHOWN\n");
+}
+
+static gboolean
+sentinx_window_focus_out(
+    GtkWidget *widget,
+    GdkEvent *event,
+    NotificationPlugin *notification_plugin)
+{
+    gtk_widget_hide(widget);
+
+    notification_plugin->dropdown_open = FALSE;
+
+    g_print("WINDOW CLOSED\n");
+
+    return FALSE;
 }
 
 static gboolean

@@ -130,6 +130,8 @@ GtkWidget *dnd_label;
 GtkWidget *dnd_switch;
     GtkWidget *btn_clear;
 
+XfconfChannel *channel;
+
     GtkWidget *card;
 
     GtkWidget *date_label;
@@ -290,6 +292,20 @@ dnd_label =
 
 dnd_switch =
     gtk_switch_new();
+
+channel =
+    xfconf_channel_get(
+        "xfce4-notifyd"
+    );
+
+gtk_switch_set_active(
+    GTK_SWITCH(dnd_switch),
+    xfconf_channel_get_bool(
+        channel,
+        "/do-not-disturb",
+        FALSE
+    )
+);
 
 g_signal_connect(
     dnd_switch,

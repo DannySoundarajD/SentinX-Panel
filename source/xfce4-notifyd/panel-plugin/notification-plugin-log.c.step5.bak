@@ -96,24 +96,37 @@ notification_plugin_mark_all_read(GtkWidget *widget, NotificationPlugin *notific
   xfce_notify_log_gbus_call_mark_all_read(notification_plugin->log, NULL, NULL, NULL);
 }
 
+
 static GtkWidget *
 sentinx_center_build(NotificationPlugin *notification_plugin)
 {
     GtkWidget *paned;
+
     GtkWidget *left_panel;
     GtkWidget *right_panel;
+
     GtkWidget *header;
     GtkWidget *calendar;
-    GtkWidget *scroll;
-    GtkWidget *notif_box;
 
-    paned = gtk_paned_new(GTK_ORIENTATION_HORIZONTAL);
+    paned =
+        gtk_paned_new(
+            GTK_ORIENTATION_HORIZONTAL
+        );
+gtk_widget_set_size_request(
+    paned,
+    900,
+    650
+);
 
-    gtk_widget_set_size_request(
-        paned,
-        900,
-        650
-    );
+gtk_widget_set_hexpand(
+    paned,
+    TRUE
+);
+
+gtk_widget_set_vexpand(
+    paned,
+    TRUE
+);
 
     left_panel =
         gtk_box_new(
@@ -154,36 +167,6 @@ sentinx_center_build(NotificationPlugin *notification_plugin)
         10
     );
 
-    scroll =
-        gtk_scrolled_window_new(
-            NULL,
-            NULL
-        );
-
-    gtk_widget_set_vexpand(
-        scroll,
-        TRUE
-    );
-
-    gtk_box_pack_start(
-        GTK_BOX(left_panel),
-        scroll,
-        TRUE,
-        TRUE,
-        0
-    );
-
-    notif_box =
-        gtk_box_new(
-            GTK_ORIENTATION_VERTICAL,
-            6
-        );
-
-    gtk_container_add(
-        GTK_CONTAINER(scroll),
-        notif_box
-    );
-
     calendar =
         gtk_calendar_new();
 
@@ -195,16 +178,12 @@ sentinx_center_build(NotificationPlugin *notification_plugin)
         10
     );
 
-    gtk_widget_show_all(
-        paned
-    );
+    gtk_widget_show_all(paned);
 
     return paned;
 }
-
 GtkWidget *
-notification_plugin_menu_new(NotificationPlugin *notification_plugin)
-{
+notification_plugin_menu_new(NotificationPlugin *notification_plugin) {
   GtkWidget *menu;
   GtkWidget *mi, *image, *label, *box;
   GDateTime *today;
@@ -257,7 +236,7 @@ gtk_widget_show_all(
     container_item
 );
 
-
+return menu;
   notify_log_icon_folder = xfce_resource_save_location (XFCE_RESOURCE_CACHE,
                                                         XFCE_NOTIFY_ICON_PATH, TRUE);
   log_icon_size = xfconf_channel_get_int (notification_plugin->channel,

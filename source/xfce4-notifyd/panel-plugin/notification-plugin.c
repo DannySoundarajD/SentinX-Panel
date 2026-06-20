@@ -51,7 +51,11 @@ static void notification_plugin_init_log_proxy(NotificationPlugin *notification_
 static void
 notification_plugin_popup_menu (NotificationPlugin *notification_plugin)
 {
-  GtkWidget *menu = notification_plugin_menu_new(notification_plugin);
+  GtkWidget *menu;
+
+menu = notification_plugin_menu_new(notification_plugin);
+
+notification_plugin->active_menu = menu;
   gtk_menu_attach_to_widget(GTK_MENU(menu), notification_plugin->button, NULL);
   gtk_widget_set_name(menu, "xfce4-notification-plugin-menu");
   g_signal_connect(menu, "selection-done",
@@ -76,10 +80,28 @@ cb_button_pressed (GtkButton *button,
 {
 if (event->button == 1)
 {
-    notification_plugin_popup_menu(notification_plugin);
+    if (notification_plugin->active_menu != NULL)
+    {
+        gtk_widget_destroy(
+            notification_plugin->active_menu
+        );
+
+        notification_plugin->active_menu = NULL;
+
+        gtk_toggle_button_set_active(
+            GTK_TOGGLE_BUTTON(button),
+            FALSE
+        );
+
+        return TRUE;
+    }
+
+    notification_plugin_popup_menu(
+        notification_plugin
+    );
+
     return TRUE;
 }
-
   if (event->button == 2)
     {
       gboolean state = xfconf_channel_get_bool (notification_plugin->channel, "/do-not-disturb", FALSE);
@@ -98,7 +120,9 @@ cb_menu_selection_done(GtkMenuShell *menu, NotificationPlugin *notification_plug
   gtk_widget_set_visible(notification_plugin->button,
                          !notification_plugin->hide_on_read
                          || notification_plugin->new_notifications);
-  gtk_widget_destroy(GTK_WIDGET(menu));
+  notification_plugin->active_menu = NULL;
+
+gtk_widget_destroy(GTK_WIDGET(menu));
 }
 
 

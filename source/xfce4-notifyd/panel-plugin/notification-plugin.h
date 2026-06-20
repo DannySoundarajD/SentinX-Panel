@@ -72,6 +72,7 @@ GtkWidget *do_not_disturb_switch;
 /* SentinX notification center */
 GtkWidget *popover;
 GtkWidget *center_widget;
+GtkWidget *active_menu;
 
     /* handlers */
     guint            menu_size_allocate_next_handler;

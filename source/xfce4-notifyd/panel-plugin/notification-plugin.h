@@ -68,9 +68,11 @@ typedef struct
 
     /* menu widgets */
 GtkWidget *do_not_disturb_switch;
-
-/* SentinX notification center */
 GtkWidget *popover;
+GtkWidget *popover_content;
+
+gboolean dropdown_open;
+/* SentinX notification center */
 GtkWidget *center_widget;
 GtkWidget *active_menu;
 

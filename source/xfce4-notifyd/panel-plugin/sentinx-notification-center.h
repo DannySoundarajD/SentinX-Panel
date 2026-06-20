@@ -3,6 +3,7 @@
 
 #include <gtk/gtk.h>
 
+GtkWidget *sentinx_notification_center_widget(void);
 GtkWidget *sentinx_notification_center_create(void);
 void sentinx_notification_center_show(void);
 

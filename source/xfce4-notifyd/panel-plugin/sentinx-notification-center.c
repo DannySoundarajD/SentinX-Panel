@@ -84,9 +84,9 @@ create_notification_card(
     return frame;
 }
 
-GtkWidget *sentinx_notification_center_create(void)
+GtkWidget *sentinx_notification_center_widget(void)
 {
-    GtkWidget *main_box;
+    g_print("SENTINX WIDGET CREATED\n");
     GtkWidget *paned;
 
     GtkWidget *left_panel;
@@ -108,57 +108,23 @@ GtkWidget *sentinx_notification_center_create(void)
     GtkWidget *events_frame;
     GtkWidget *events_label;
 
-    window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 
-    g_signal_connect(
-        window,
-        "delete-event",
-        G_CALLBACK(on_window_delete),
-        NULL
-    );
-
-    gtk_window_set_title(
-        GTK_WINDOW(window),
-        "SentinX Notification Center"
-    );
-
-    gtk_window_set_default_size(
-        GTK_WINDOW(window),
-        900,
-        650
-    );
-
-    gtk_window_set_position(
-        GTK_WINDOW(window),
-        GTK_WIN_POS_CENTER
-    );
-
-    gtk_window_set_resizable(
-        GTK_WINDOW(window),
-        TRUE
-    );
-
-    main_box = gtk_box_new(
-        GTK_ORIENTATION_VERTICAL,
-        0
-    );
-
-    gtk_container_add(
-        GTK_CONTAINER(window),
-        main_box
-    );
 
     paned = gtk_paned_new(
         GTK_ORIENTATION_HORIZONTAL
     );
+    gtk_widget_set_size_request(
+    paned,
+    900,
+    650
+);
 
-    gtk_box_pack_start(
-        GTK_BOX(main_box),
-        paned,
-        TRUE,
-        TRUE,
-        0
-    );
+gtk_paned_set_position(
+    GTK_PANED(paned),
+    650
+);
+
+/* paned is now root widget */
 
     left_panel = gtk_box_new(
         GTK_ORIENTATION_VERTICAL,
@@ -349,9 +315,9 @@ GtkWidget *sentinx_notification_center_create(void)
         10
     );
 
-    gtk_widget_show_all(window);
+    gtk_widget_show_all(paned);
 
-    return window;
+    return paned;
 }
 
 void sentinx_notification_center_show(void)
@@ -364,4 +330,36 @@ void sentinx_notification_center_show(void)
 
     gtk_widget_show(window);
     gtk_window_present(GTK_WINDOW(window));
+}
+
+GtkWidget *
+sentinx_notification_center_create(void)
+{
+    GtkWidget *window;
+    GtkWidget *content;
+
+    window =
+        gtk_window_new(
+            GTK_WINDOW_TOPLEVEL
+        );
+
+g_print("SENTINX WINDOW CREATED\n");
+
+content =
+    sentinx_notification_center_widget();
+
+    gtk_container_add(
+        GTK_CONTAINER(window),
+        content
+    );
+
+    gtk_window_set_default_size(
+        GTK_WINDOW(window),
+        900,
+        650
+    );
+
+    gtk_widget_show_all(window);
+
+    return window;
 }

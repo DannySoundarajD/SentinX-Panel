@@ -33,6 +33,7 @@
 #include "notification-plugin-dialogs.h"
 #include "sentinx-notification-center.h"
 
+
 /* prototypes */
 static void
 notification_plugin_construct (XfcePanelPlugin *panel_plugin);
@@ -49,56 +50,89 @@ static void cb_menu_selection_done(GtkMenuShell *menu,
 static void notification_plugin_init_log_proxy(NotificationPlugin *notification_plugin);
 
 static void
-notification_plugin_popup_menu (NotificationPlugin *notification_plugin)
+notification_plugin_popup_menu(
+    NotificationPlugin *notification_plugin)
 {
-  GtkWidget *menu;
+    GtkWidget *window;
+    GtkWidget *content;
+    GdkScreen *screen;
+    gint screen_width;
 
-menu = notification_plugin_menu_new(notification_plugin);
+    window =
+        gtk_window_new(GTK_WINDOW_TOPLEVEL);
 
-notification_plugin->active_menu = menu;
-  gtk_menu_attach_to_widget(GTK_MENU(menu), notification_plugin->button, NULL);
-  gtk_widget_set_name(menu, "xfce4-notification-plugin-menu");
-  g_signal_connect(menu, "selection-done",
-                   G_CALLBACK(cb_menu_selection_done), notification_plugin);
+    gtk_window_set_decorated(
+        GTK_WINDOW(window),
+        FALSE
+    );
 
-  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (notification_plugin->button), TRUE);
-  gtk_menu_popup_at_widget(GTK_MENU(menu),
-                           notification_plugin->button,
-                           xfce_panel_plugin_get_orientation(notification_plugin->plugin) == GTK_ORIENTATION_VERTICAL
-                           ? GDK_GRAVITY_NORTH_EAST : GDK_GRAVITY_SOUTH_WEST,
-                           GDK_GRAVITY_NORTH_WEST,
-                           NULL);
-  xfce_panel_plugin_register_menu(notification_plugin->plugin, GTK_MENU(menu));
+    gtk_window_set_resizable(
+        GTK_WINDOW(window),
+        FALSE
+    );
+
+    gtk_window_set_type_hint(
+        GTK_WINDOW(window),
+        GDK_WINDOW_TYPE_HINT_POPUP_MENU
+    );
+
+    content =
+        sentinx_notification_center_widget();
+
+    gtk_container_add(
+        GTK_CONTAINER(window),
+        content
+    );
+
+    gtk_window_set_default_size(
+        GTK_WINDOW(window),
+        900,
+        650
+    );
+
+    gtk_widget_show_all(window);
+
+    screen = gdk_screen_get_default();
+
+    screen_width =
+        gdk_screen_get_width(screen);
+
+    gtk_window_move(
+        GTK_WINDOW(window),
+        (screen_width - 900) / 2,
+        40
+    );
+
+    notification_plugin->popover = window;
+    notification_plugin->dropdown_open = TRUE;
+
+    g_print("SENTINX WINDOW SHOWN\n");
 }
-
-
 
 static gboolean
 cb_button_pressed (GtkButton *button,
                    GdkEventButton *event,
                    NotificationPlugin *notification_plugin)
 {
+
 if (event->button == 1)
 {
-    if (notification_plugin->active_menu != NULL)
+g_print("LEFT CLICK DETECTED\n");
+    if (notification_plugin->dropdown_open)
     {
-        gtk_widget_destroy(
-            notification_plugin->active_menu
+        gtk_widget_hide(
+            notification_plugin->popover
         );
 
-        notification_plugin->active_menu = NULL;
-
-        gtk_toggle_button_set_active(
-            GTK_TOGGLE_BUTTON(button),
-            FALSE
-        );
-
-        return TRUE;
+        notification_plugin->dropdown_open = FALSE;
     }
-
-    notification_plugin_popup_menu(
-        notification_plugin
-    );
+    else
+    {
+g_print("OPENING POPOVER\n");        
+notification_plugin_popup_menu(
+            notification_plugin
+        );
+    }
 
     return TRUE;
 }
@@ -355,7 +389,10 @@ notification_plugin_new (XfcePanelPlugin *panel_plugin)
 
   /* Allocate memory for the plugin structure */
   notification_plugin = g_slice_new0 (NotificationPlugin);
-  notification_plugin->plugin = panel_plugin;
+notification_plugin->popover = NULL;
+notification_plugin->popover_content = NULL;
+notification_plugin->dropdown_open = FALSE;  
+notification_plugin->plugin = panel_plugin;
 
   /* Initialize xfconf */
   xfconf_init (NULL);

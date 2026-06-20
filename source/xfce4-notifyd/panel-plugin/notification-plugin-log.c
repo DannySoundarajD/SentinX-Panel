@@ -38,7 +38,7 @@
 
 #include "notification-plugin.h"
 #include "notification-plugin-log.h"
-
+#include "sentinx-notification-center.h"
 
 
 static void
@@ -96,111 +96,6 @@ notification_plugin_mark_all_read(GtkWidget *widget, NotificationPlugin *notific
   xfce_notify_log_gbus_call_mark_all_read(notification_plugin->log, NULL, NULL, NULL);
 }
 
-static GtkWidget *
-sentinx_center_build(NotificationPlugin *notification_plugin)
-{
-    GtkWidget *paned;
-    GtkWidget *left_panel;
-    GtkWidget *right_panel;
-    GtkWidget *header;
-    GtkWidget *calendar;
-    GtkWidget *scroll;
-    GtkWidget *notif_box;
-
-    paned = gtk_paned_new(GTK_ORIENTATION_HORIZONTAL);
-
-    gtk_widget_set_size_request(
-        paned,
-        900,
-        650
-    );
-
-    left_panel =
-        gtk_box_new(
-            GTK_ORIENTATION_VERTICAL,
-            10
-        );
-
-    right_panel =
-        gtk_box_new(
-            GTK_ORIENTATION_VERTICAL,
-            10
-        );
-
-    gtk_paned_pack1(
-        GTK_PANED(paned),
-        left_panel,
-        TRUE,
-        FALSE
-    );
-
-    gtk_paned_pack2(
-        GTK_PANED(paned),
-        right_panel,
-        FALSE,
-        FALSE
-    );
-
-    header =
-        gtk_label_new(
-            "SentinX Notifications"
-        );
-
-    gtk_box_pack_start(
-        GTK_BOX(left_panel),
-        header,
-        FALSE,
-        FALSE,
-        10
-    );
-
-    scroll =
-        gtk_scrolled_window_new(
-            NULL,
-            NULL
-        );
-
-    gtk_widget_set_vexpand(
-        scroll,
-        TRUE
-    );
-
-    gtk_box_pack_start(
-        GTK_BOX(left_panel),
-        scroll,
-        TRUE,
-        TRUE,
-        0
-    );
-
-    notif_box =
-        gtk_box_new(
-            GTK_ORIENTATION_VERTICAL,
-            6
-        );
-
-    gtk_container_add(
-        GTK_CONTAINER(scroll),
-        notif_box
-    );
-
-    calendar =
-        gtk_calendar_new();
-
-    gtk_box_pack_start(
-        GTK_BOX(right_panel),
-        calendar,
-        FALSE,
-        FALSE,
-        10
-    );
-
-    gtk_widget_show_all(
-        paned
-    );
-
-    return paned;
-}
 
 GtkWidget *
 notification_plugin_menu_new(NotificationPlugin *notification_plugin)
@@ -239,9 +134,7 @@ gtk_widget_set_size_request(
     650
 );
 center_widget =
-    sentinx_center_build(
-        notification_plugin
-    );
+	sentinx_notification_center_widget();
 
 gtk_container_add(
     GTK_CONTAINER(container_item),

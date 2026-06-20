@@ -1,0 +1,676 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-apps.xfce4-notifyd package.
+# 
+# Translators:
+# Alois Nešpor <info@aloisnespor.info>, 2013
+# k3dar, 2022
+# b537cbea55af75c3f49fe8b21c4cf8ea_f0ce149, 2023
+# Martin Šiška <martin-siska@email.cz>, 2024
+# Michal Várady <miko.vaji@gmail.com>, 2016-2020,2024-2026
+# Pavel Borecki <pavel.borecki@gmail.com>, 2018
+# Petr Šimáček <petr.simacek@gmail.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce Apps\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2026-04-03 12:57+0200\n"
+"PO-Revision-Date: 2013-07-03 18:39+0000\n"
+"Last-Translator: Michal Várady <miko.vaji@gmail.com>, 2016-2020,2024-2026\n"
+"Language-Team: Czech (http://app.transifex.com/xfce/xfce-apps/language/cs/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+
+#: common/xfce-notify-log-util.c:379
+msgid "Do you really want to clear the notification log?"
+msgstr "Opravdu chcete vymazat protokol oznámení?"
+
+#: common/xfce-notify-log-util.c:384
+msgid "Clear notification log"
+msgstr "Vymazat protokol oznámení"
+
+#: common/xfce-notify-log-util.c:387
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:928
+msgid "Cancel"
+msgstr "Zrušit"
+
+#: common/xfce-notify-log-util.c:389
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:204
+msgid "Clear"
+msgstr "Vymazat"
+
+#: common/xfce-notify-log-util.c:406 common/xfce-notify-log-util.c:414
+msgid "include icon cache"
+msgstr "zahrnout mezipaměť ikon"
+
+#: common/xfce-notify-log-util.c:451
+msgid "Now"
+msgstr "Nyní"
+
+#: panel-plugin/notification-plugin.c:340
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:46
+#: xfce4-notifyd-config/xfce4-notifyd-config.desktop.in:4
+msgid "Notifications"
+msgstr "Oznámení"
+
+#: panel-plugin/notification-plugin-dialogs.c:49
+#, c-format
+msgid "Unable to open the following url: %s"
+msgstr "Nelze otevřít následující adresu URL: %s"
+
+#: panel-plugin/notification-plugin-dialogs.c:133
+msgid "This is the notification plugin"
+msgstr "Toto je zásuvný modul oznámení"
+
+#: panel-plugin/notification-plugin-dialogs.c:135
+msgid "Copyright © 2017 Simon Steinbeiß\n"
+msgstr "Copyright © 2017 Simon Steinbeiß\n"
+
+#: panel-plugin/notification-plugin-log.c:151
+msgid "<b>_Do not disturb</b>"
+msgstr "<b>_Nerušit</b>"
+
+#: panel-plugin/notification-plugin-log.c:355
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:174
+msgid "Unable to open notification log"
+msgstr "Nepodařilo se otevřít protokol oznámení"
+
+#: panel-plugin/notification-plugin-log.c:357
+msgid "No unread notifications"
+msgstr "Žádná nepřečtená oznámení"
+
+#: panel-plugin/notification-plugin-log.c:359
+msgid "No notifications"
+msgstr "Žádná oznámení"
+
+#: panel-plugin/notification-plugin-log.c:381
+msgid "_Clear log"
+msgstr "_Vymazat protokol"
+
+#: panel-plugin/notification-plugin-log.c:392
+msgid "_Mark all read"
+msgstr "_Označit vše jako přečtené"
+
+#: panel-plugin/notification-plugin-log.c:401
+msgid "_Notification settings…"
+msgstr "_Nastavení oznámení…"
+
+#: panel-plugin/notification-plugin-settings.glade:30
+msgid "Notification Plugin Settings"
+msgstr "Nastavení zásuvného modulu oznámení"
+
+#: panel-plugin/notification-plugin-settings.glade:46
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:66
+msgid "_Help"
+msgstr "_Nápověda"
+
+#: panel-plugin/notification-plugin-settings.glade:61
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:82
+msgid "_Close"
+msgstr "_Zavřít"
+
+#: panel-plugin/notification-plugin-settings.glade:98
+msgid "Size of icons in menu"
+msgstr "Velikost ikon v nabídce"
+
+#: panel-plugin/notification-plugin-settings.glade:99
+msgid "Size of the icon shown next to each notification listed in the menu"
+msgstr "Velikost ikony zobrazené u každého oznámení uvedeného v nabídce"
+
+#: panel-plugin/notification-plugin-settings.glade:126
+msgid "Number of notifications to show"
+msgstr "Počet zobrazených oznámení"
+
+#: panel-plugin/notification-plugin-settings.glade:154
+msgid "Only show notifications from today"
+msgstr "Zobrazit pouze dnešní oznámení"
+
+#: panel-plugin/notification-plugin-settings.glade:178
+msgid "Hide 'Clear log' confirmation dialog"
+msgstr "Skrýt potvrzovací dialogové okno „Vymazat protokol“"
+
+#: panel-plugin/notification-plugin-settings.glade:202
+msgid "Hide panel button when no unread notifications"
+msgstr "Skrýt tlačítko na panelu, pokud nejsou žádná nepřečtená oznámení"
+
+#: panel-plugin/notification-plugin-settings.glade:225
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:891
+msgid "Appearance"
+msgstr "Vzhled"
+
+#: panel-plugin/notification-plugin-settings.glade:242
+msgid "Show in menu"
+msgstr "Zobrazit v nabídce"
+
+#: panel-plugin/notification-plugin-settings.glade:256
+msgid "All notifications"
+msgstr "Všechna oznámení"
+
+#: panel-plugin/notification-plugin-settings.glade:257
+msgid "Unread notifications"
+msgstr "Nepřečtená oznámení"
+
+#: panel-plugin/notification-plugin-settings.glade:269
+msgid "Behavior"
+msgstr "Chování"
+
+#: panel-plugin/notification-plugin-settings.glade:286
+msgid "After showing the menu"
+msgstr "Po zobrazení nabídky"
+
+#: panel-plugin/notification-plugin-settings.glade:300
+msgid "Mark all log entries read"
+msgstr "Označit všechny položky protokolu jako přečtené"
+
+#: panel-plugin/notification-plugin-settings.glade:301
+msgid "Mark shown log entries read"
+msgstr "Označit všechny zobrazené položky protokolu jako přečtené"
+
+#: panel-plugin/notification-plugin-settings.glade:302
+msgid "Do nothing"
+msgstr "Nic nedělat"
+
+#: panel-plugin/notification-plugin.desktop.in:5
+msgid "Notification Plugin"
+msgstr "Zásuvný modul oznámení"
+
+#: panel-plugin/notification-plugin.desktop.in:6
+msgid "Notification plugin for the Xfce panel"
+msgstr "Zásuvný modul oznámení pro panel Xfce"
+
+#: xfce4-notifyd/main.c:62
+msgid ""
+"Your Wayland compositor does not support required protocol wlr-layer-shell."
+msgstr "Váš kompozitor Wayland nepodporuje požadovaný protokol wlr-layer-shell."
+
+#: xfce4-notifyd/main.c:69
+msgid "xfce4-notifyd was built without support for your windowing system."
+msgstr "Služba xfce4-notifyd byla sestavena bez podpory vašeho systému správy oken."
+
+#: xfce4-notifyd/main.c:88 xfce4-notifyd/main.c:99 xfce4-notifyd/main.c:111
+#: xfce4-notifyd-config/main.c:1272
+msgid "Xfce Notify Daemon"
+msgstr "Služba oznámení Xfce"
+
+#: xfce4-notifyd/main.c:91
+#, c-format
+msgid "Unknown option \"%s\"\n"
+msgstr "Neznámá volba \"%s\"\n"
+
+#: xfce4-notifyd/main.c:101 xfce4-notifyd/main.c:113
+msgid "Unable to start notification daemon"
+msgstr "Nelze spustit službu oznámení"
+
+#: xfce4-notifyd/xfce-notify-daemon.c:590
+msgid "Another notification daemon is running, exiting\n"
+msgstr "Již je spuštěna jiná služba oznámení, ukončuje se\n"
+
+#: xfce4-notifyd/xfce-notify-daemon-log.c:175
+#: xfce4-notifyd/xfce-notify-daemon-log.c:206
+#: xfce4-notifyd/xfce-notify-daemon-log.c:240
+#: xfce4-notifyd/xfce-notify-daemon-log.c:253
+#: xfce4-notifyd/xfce-notify-daemon-log.c:287
+#: xfce4-notifyd/xfce-notify-daemon-log.c:301
+#: xfce4-notifyd/xfce-notify-daemon-log.c:313
+#: xfce4-notifyd/xfce-notify-daemon-log.c:327
+#: xfce4-notifyd/xfce-notify-daemon-log.c:339
+msgid "Log is unavailable"
+msgstr "Protokol není dostupný"
+
+#: xfce4-notifyd/xfce-notify-daemon-log.c:180
+msgid "Log entry not found"
+msgstr "Položka protokolu nebyla nalezena"
+
+#: xfce4-notifyd/xfce-notify-log.c:235
+#, c-format
+msgid "The notification log directory (%s) is not a directory"
+msgstr "Adresář protokolu oznámení (%s) není adresář"
+
+#: xfce4-notifyd/xfce-notify-log.c:247
+#, c-format
+msgid "Failed to open notification log: %s"
+msgstr "Nepodařilo se otevřít protokol oznámení: %s"
+
+#: xfce4-notifyd/xfce-notify-log.c:331
+#, c-format
+msgid "Failed to prepare SQL statement: %%s (%s)"
+msgstr "Nepodařilo se připravit příkaz SQL: %%s (%s)"
+
+#: xfce4-notifyd/xfce-notify-log.c:360
+msgid "trailing characters at end of statement"
+msgstr "neočekávané znaky za koncem příkazu"
+
+#: xfce4-notifyd/xfce-notify-log.c:458
+#, c-format
+msgid "Failed to create 'notifications' table: %s"
+msgstr "Nepodařilo se vytvořit tabulku „notifications“: %s"
+
+#: xfce4-notifyd/xfce-notify-log.c:459
+#, c-format
+msgid "Failed to create DB timestamp index: %s"
+msgstr "Nepodařilo se vytvořit databázový index časového razítka: %s"
+
+#: xfce4-notifyd/xfce-notify-log.c:460
+#, c-format
+msgid "Failed to create DB is_read index: %s"
+msgstr "Nepodařilo se vytvořit databázový index is_read: %s"
+
+#: xfce4-notifyd/xfce-notify-window.c:1453
+msgid "Default Action"
+msgstr "Výchozí akce"
+
+#: xfce4-notifyd/xfce4-notifyd.desktop.in:4
+msgid "Xfce Notification Daemon"
+msgstr "Služba oznámení Xfce"
+
+#: xfce4-notifyd-config/main.c:115
+msgid "Notification Preview"
+msgstr "Náhled oznámení"
+
+#: xfce4-notifyd-config/main.c:116
+msgid "This is what notifications will look like"
+msgstr "Takto bude vypadat oznámení"
+
+#: xfce4-notifyd-config/main.c:121
+msgid "Button"
+msgstr "Tlačítko"
+
+#: xfce4-notifyd-config/main.c:128
+msgid "Notification preview failed"
+msgstr "Náhled oznámení se nezdařil"
+
+#: xfce4-notifyd-config/main.c:591
+#, c-format
+msgid ""
+"Are you sure you want to delete notification settings for application "
+"\"%s\"?"
+msgstr "Opravdu chcete odstranit nastavení oznámení pro aplikaci \"%s\"?"
+
+#: xfce4-notifyd-config/main.c:595
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:930
+msgid "Delete"
+msgstr "Odstranit"
+
+#: xfce4-notifyd-config/main.c:597
+#: xfce4-notifyd-config/xfce4-notifyd-config-known-app.glade:133
+msgid "Forget Application"
+msgstr "Zapomenout aplikaci"
+
+#: xfce4-notifyd-config/main.c:697
+msgid "Unspecified applications"
+msgstr "Nespecifikované aplikace"
+
+#: xfce4-notifyd-config/main.c:930
+#, c-format
+msgid ""
+"<b>Currently only urgent notifications are shown.</b>\n"
+"Notification logging is %s."
+msgstr "<b>Aktuálně jsou zobrazována pouze naléhavá oznámení.</b>\nProtokolování oznámení je %s."
+
+#: xfce4-notifyd-config/main.c:937
+msgid "enabled"
+msgstr "povoleno"
+
+#: xfce4-notifyd-config/main.c:937
+msgid "disabled"
+msgstr "zakázáno"
+
+#: xfce4-notifyd-config/main.c:1173
+msgid ""
+"<big><b>Currently there are no known applications.</b></big>\n"
+"As soon as an application sends a notification\n"
+"it will appear in this list."
+msgstr "<big><b>Aktuálně zde nejsou žádné známé aplikace.</b></big>\nJakmile aplikace pošle oznámení, objeví se v\ntomto seznamu."
+
+#: xfce4-notifyd-config/main.c:1242
+msgid "Released under the terms of the GNU General Public License, version 2\n"
+msgstr "Vydáno pod podmínkami licence GNU General Public License, verze 2\n"
+
+#: xfce4-notifyd-config/main.c:1243
+#, c-format
+msgid "Please report bugs to %s.\n"
+msgstr "Prosíme, abyste hlásili chyby na adresu %s.\n"
+
+#: xfce4-notifyd-config/main.c:1274
+msgid "Settings daemon is unavailable"
+msgstr "Služba nastavení není dostupná"
+
+#: xfce4-notifyd-config/main.c:1376
+msgid "Display version information"
+msgstr "Zobrazit informace o verzi"
+
+#: xfce4-notifyd-config/main.c:1377
+msgid "Settings manager socket"
+msgstr "Soket správce nastavení"
+
+#: xfce4-notifyd-config/main.c:1377
+msgid "SOCKET_ID"
+msgstr "SOCKET_ID"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:176
+msgid ""
+"<big><b>Empty log</b></big>\n"
+"No notifications have been logged yet."
+msgstr "<big><b>Protokol je prázdný</b></big>\nDosud nebyla zaprotokolována žádná oznámení."
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:195
+msgid "Refresh"
+msgstr "Obnovit"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:196
+msgid "Refresh the notification log"
+msgstr "Obnoví protokol oznámení"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:205
+msgid "Clear the notification log"
+msgstr "Vymaže protokol oznámení"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:213
+msgid "Mark All Read"
+msgstr "Označit vše jako přečtené"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:214
+msgid "Mark all unread notifications as read"
+msgstr "Označit všechna nepřečtená oznámení jako přečtená"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:222
+msgid "Copy To Clipboard"
+msgstr "Zkopírovat do schránky"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:223
+msgid "Copy the selected log entries to the clipboard"
+msgstr "Zkopíruje vybrané položky protokolu do schránky"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:231
+msgid "Delete Entry"
+msgstr "Odstranit položku"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:232
+msgid "Deletes the selected log entries"
+msgstr "Odstraní vybrané položky protokolu"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:240
+msgid "Show Log Location"
+msgstr "Zobrazit umístění protokolu"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:241
+msgid "Shows the location of the log file in the file manager"
+msgstr "Zobrazí umístění souboru protokolu ve správci souborů"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:564
+msgid "Mark log entry _read"
+msgstr "Označit položku p_rotokolu jako přečtenou"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:771
+msgid "Yesterday and before"
+msgstr "Včera a dříve"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:925
+msgid "Delete Selected Log Entries"
+msgstr "Odstranit vybrané položky protokolu"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:1200
+msgid "Loading more log entries..."
+msgstr "Načítají se další položky protokolu..."
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:144
+msgid ""
+"The notification service is not running. No notifications will be shown."
+msgstr "Služba oznámení není spuštěna. Oznámení se nebudou zobrazovat."
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:223
+msgid "<b>Currently only urgent notifications are shown.</b>"
+msgstr "<b>Aktuálně se zobrazují pouze naléhavá oznámení.</b>"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:309
+msgid "Fade out"
+msgstr "Postupné mizení"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:322
+msgid "_Slide out"
+msgstr "Vy_sunout"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:348
+msgid "Do not disturb"
+msgstr "Nerušit"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:372
+msgid "<b>Behavior</b>"
+msgstr "<b>Chování</b>"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:386
+msgid "<b>Animations</b>"
+msgstr "<b>Animace</b>"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:399
+msgid ""
+"By default the notification bubbles will be shown on the display on which "
+"the mouse pointer is located."
+msgstr "Ve výchozím nastavení se oznámení zobrazí na displeji, na kterém se nachází ukazatel myši."
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:401
+msgid "Show notifications on"
+msgstr "Zobrazovat oznámení na"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:414
+msgid ""
+"The \"Enable event sounds\" setting in the Appearance Settings dialog must "
+"be checked to hear notification sounds"
+msgstr "Nastavení „Povolit zvuky událostí“ v dialogovém okně Nastavení vzhledu je nutné zaškrnout, aby byly zvuky oznámení slyšitelné."
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:416
+msgid "_Mute sounds"
+msgstr "_Ztlumit zvuky"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:443
+msgid "Always show percent-value notifications"
+msgstr "Vždy zobrazovat oznámení s hodnotami v procentech"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:468
+msgid "When displaying notifications, show"
+msgstr "Při zobrazení oznámení zobrazit"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:482
+msgid "icon, summary, and body"
+msgstr "ikonu, shrnutí a text oznámení"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:483
+msgid "icon and summary"
+msgstr "ikonu a shrnutí"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:484
+msgid "icon and application name"
+msgstr "ikonu a název aplikace"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:498
+msgid "monitor with mouse pointer"
+msgstr "monitor s ukazatelem myši"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:499
+msgid "primary monitor"
+msgstr "primární monitor"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:500
+msgid "all monitors"
+msgstr "všechny monitory"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:512
+msgid ""
+"Prevent redundant notifications. If a message with the same summary and body"
+" is already visible on screen, new identical alerts will be suppressed. "
+"Useful for multi-instance applications like chat clients."
+msgstr "Předchází nadbytečným oznámením. Pokud je již zpráva se stejným souhrnem a obsahem na obrazovce viditelná, nová identická oznámení budou potlačena. Užitečné pro víceinstanční aplikace, jako například chatovací klienty."
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:514
+msgid "_Suppress duplicate notifications"
+msgstr "_Potlačit duplicitní oznámení"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:545
+msgid "General"
+msgstr "Obecné"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:583
+msgid "seconds"
+msgstr "sekundách"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:598
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:861
+msgid "10"
+msgstr "10"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:623
+msgid "_Opacity"
+msgstr "_Neprůhlednost"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:637
+msgid "Default _position"
+msgstr "Výchozí _pozice"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:652
+msgid "Top left"
+msgstr "Vlevo nahoře"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:653
+msgid "Bottom left"
+msgstr "Vlevo dole"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:654
+msgid "Top right"
+msgstr "Vpravo nahoře"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:655
+msgid "Bottom right"
+msgstr "Vpravo dole"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:656
+msgid "Top center"
+msgstr "Nahoře uprostřed"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:657
+msgid "Bottom center"
+msgstr "Dole uprostřed"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:687
+msgid "_Theme"
+msgstr "_Motiv"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:700
+msgid ""
+"Show the notification summary and body when the notification is a percent "
+"value, such as audio volume or screen brightness"
+msgstr "Zobrazit shrnutí a text oznámení, pokud oznámení obsahuje procentuální hodnotu, např. hlasitost zvuku nebo jas obrazovky."
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:702
+msgid "Show text with percent _values"
+msgstr "Zobrazit text s hodnotami _v procentech"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:716
+msgid "Date/time _format"
+msgstr "_Formát data a času"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:737
+msgid "Locale default"
+msgstr "Výchozí lokální nastavení"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:738
+msgid "Relative times"
+msgstr "Relativní časy"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:739
+msgid "ISO8601"
+msgstr "ISO8601"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:740
+msgid "Custom"
+msgstr "Vlastní"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:768
+msgid "Show _Preview"
+msgstr "Zobrazit _náhled"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:794
+msgid "_Disappear after"
+msgstr "_Skrýt po"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:812
+msgid ""
+"When creating a notification, applications can request how long they'd like "
+"the notification remain on screen. This setting controls whether or not that"
+" request is honored."
+msgstr "Když aplikace vytvářejí oznámení, mohou požádat o dobu, po kterou oznámení zůstane na obrazovce. Toto nastavení ovládá, zda je tento požadavek respektuje."
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:814
+msgid "Honor app-requested \"Disappear after\" time"
+msgstr "Respektovat aplikací požadovaný čas „Skrýt po“"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:837
+msgid "_Minimum notification width"
+msgstr "_Minimální šířka oznámení"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:909
+msgid "<b>Per-application notification settings</b>"
+msgstr "<b>Nastavení oznámení pro jednotlivé aplikace</b>"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:936
+msgid "Applications"
+msgstr "Aplikace"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:955
+msgid "Log notifications"
+msgstr "Protokolovat oznámení"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:981
+msgid "only during \"Do not disturb\", or when notification bodies are not shown"
+msgstr "pouze při režimu \"Nerušit\" nebo pokud se nezobrazuje text oznámení"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:982
+msgid "always"
+msgstr "vždy"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:994
+msgid "Log applications"
+msgstr "Protokolovat aplikace"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:1025
+msgid "all"
+msgstr "vše"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:1026
+msgid "all except blocked"
+msgstr "vše kromě blokovaných"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:1027
+msgid "only blocked"
+msgstr "pouze blokované"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:1039
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:1055
+msgid "The maximum number of entries to be retained in the log."
+msgstr "Maximální počet položek, které mají být uchovávány v protokolu."
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:1051
+msgid "Maximum number of log entries to keep"
+msgstr "Maximální počet uchovávaných položek protokolu"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:1080
+msgid "Log"
+msgstr "Protokol"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config-known-app.glade:27
+msgid "Mute application"
+msgstr "Ztlumit aplikaci"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config-known-app.glade:62
+msgid "Allow urgent notifications"
+msgstr "Povolit naléhavá oznámení"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config-known-app.glade:98
+msgid "Include in log"
+msgstr "Zahrnout do protokolu"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.desktop.in:5
+msgid "Customize how notifications appear on your screen"
+msgstr "Upravte způsob, jakým se budou oznámení zobrazovat"

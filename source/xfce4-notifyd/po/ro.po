@@ -1,0 +1,671 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-apps.xfce4-notifyd package.
+# 
+# Translators:
+# Mișu Moldovan <dumol@xfce.org>, 2011
+# Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2024-2025
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce Apps\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2026-04-03 12:57+0200\n"
+"PO-Revision-Date: 2013-07-03 18:39+0000\n"
+"Last-Translator: Mișu Moldovan <dumol@xfce.org>, 2011\n"
+"Language-Team: Romanian (http://app.transifex.com/xfce/xfce-apps/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: common/xfce-notify-log-util.c:379
+msgid "Do you really want to clear the notification log?"
+msgstr "Chiar doriți să goliți jurnalul de notificări?"
+
+#: common/xfce-notify-log-util.c:384
+msgid "Clear notification log"
+msgstr "Golește jurnalul de notificări"
+
+#: common/xfce-notify-log-util.c:387
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:928
+msgid "Cancel"
+msgstr "Anulați"
+
+#: common/xfce-notify-log-util.c:389
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:204
+msgid "Clear"
+msgstr "Golește"
+
+#: common/xfce-notify-log-util.c:406 common/xfce-notify-log-util.c:414
+msgid "include icon cache"
+msgstr "include cache-ul pictogramelor"
+
+#: common/xfce-notify-log-util.c:451
+msgid "Now"
+msgstr "Acum"
+
+#: panel-plugin/notification-plugin.c:340
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:46
+#: xfce4-notifyd-config/xfce4-notifyd-config.desktop.in:4
+msgid "Notifications"
+msgstr "Notificări"
+
+#: panel-plugin/notification-plugin-dialogs.c:49
+#, c-format
+msgid "Unable to open the following url: %s"
+msgstr "Nu s-a putut deschide următoarea adresă URL: %s"
+
+#: panel-plugin/notification-plugin-dialogs.c:133
+msgid "This is the notification plugin"
+msgstr "Acesta este modulul de notificări"
+
+#: panel-plugin/notification-plugin-dialogs.c:135
+msgid "Copyright © 2017 Simon Steinbeiß\n"
+msgstr "Drepturi de autor © 2017 Simon Steinbeiß\n"
+
+#: panel-plugin/notification-plugin-log.c:151
+msgid "<b>_Do not disturb</b>"
+msgstr "<b>Nu _deranja</b>"
+
+#: panel-plugin/notification-plugin-log.c:355
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:174
+msgid "Unable to open notification log"
+msgstr "Nu se poate deschide jurnalul de notificări"
+
+#: panel-plugin/notification-plugin-log.c:357
+msgid "No unread notifications"
+msgstr "Nu există notificări necitite"
+
+#: panel-plugin/notification-plugin-log.c:359
+msgid "No notifications"
+msgstr "Nu există notificări"
+
+#: panel-plugin/notification-plugin-log.c:381
+msgid "_Clear log"
+msgstr "_Golire jurnal"
+
+#: panel-plugin/notification-plugin-log.c:392
+msgid "_Mark all read"
+msgstr "_Marchează toate ca citite"
+
+#: panel-plugin/notification-plugin-log.c:401
+msgid "_Notification settings…"
+msgstr "Opțiuni de _notificare…"
+
+#: panel-plugin/notification-plugin-settings.glade:30
+msgid "Notification Plugin Settings"
+msgstr "Opțiuni ale modulului de notificare"
+
+#: panel-plugin/notification-plugin-settings.glade:46
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:66
+msgid "_Help"
+msgstr "_Ajutor"
+
+#: panel-plugin/notification-plugin-settings.glade:61
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:82
+msgid "_Close"
+msgstr "În_chide"
+
+#: panel-plugin/notification-plugin-settings.glade:98
+msgid "Size of icons in menu"
+msgstr "Dimensiunea pictogramelor din meniu"
+
+#: panel-plugin/notification-plugin-settings.glade:99
+msgid "Size of the icon shown next to each notification listed in the menu"
+msgstr "Dimensiunea pictogramei afișate lângă fiecare notificare listată în meniu"
+
+#: panel-plugin/notification-plugin-settings.glade:126
+msgid "Number of notifications to show"
+msgstr "Numărul de notificări de afișat"
+
+#: panel-plugin/notification-plugin-settings.glade:154
+msgid "Only show notifications from today"
+msgstr "Afișează numai notificările de astăzi"
+
+#: panel-plugin/notification-plugin-settings.glade:178
+msgid "Hide 'Clear log' confirmation dialog"
+msgstr "Ascunde dialogul de confirmare «Golire jurnal»"
+
+#: panel-plugin/notification-plugin-settings.glade:202
+msgid "Hide panel button when no unread notifications"
+msgstr "Ascunde butonul panoului atunci când nu există notificări necitite"
+
+#: panel-plugin/notification-plugin-settings.glade:225
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:891
+msgid "Appearance"
+msgstr "Aspect"
+
+#: panel-plugin/notification-plugin-settings.glade:242
+msgid "Show in menu"
+msgstr "Afișează în meniu"
+
+#: panel-plugin/notification-plugin-settings.glade:256
+msgid "All notifications"
+msgstr "Toate notificările"
+
+#: panel-plugin/notification-plugin-settings.glade:257
+msgid "Unread notifications"
+msgstr "Notificări necitite"
+
+#: panel-plugin/notification-plugin-settings.glade:269
+msgid "Behavior"
+msgstr "Comportament"
+
+#: panel-plugin/notification-plugin-settings.glade:286
+msgid "After showing the menu"
+msgstr "După afișarea meniului"
+
+#: panel-plugin/notification-plugin-settings.glade:300
+msgid "Mark all log entries read"
+msgstr "Marcați toate intrările din jurnal ca fiind citite"
+
+#: panel-plugin/notification-plugin-settings.glade:301
+msgid "Mark shown log entries read"
+msgstr "Marcați intrările de jurnal afișate ca citite"
+
+#: panel-plugin/notification-plugin-settings.glade:302
+msgid "Do nothing"
+msgstr "Nu face nimic"
+
+#: panel-plugin/notification-plugin.desktop.in:5
+msgid "Notification Plugin"
+msgstr "Modul de notificare"
+
+#: panel-plugin/notification-plugin.desktop.in:6
+msgid "Notification plugin for the Xfce panel"
+msgstr "Modul de notificare pentru panoul Xfce"
+
+#: xfce4-notifyd/main.c:62
+msgid ""
+"Your Wayland compositor does not support required protocol wlr-layer-shell."
+msgstr "Compozitorul Wayland nu acceptă protocolul necesar wlr-layer-shell."
+
+#: xfce4-notifyd/main.c:69
+msgid "xfce4-notifyd was built without support for your windowing system."
+msgstr "xfce4-notifyd a fost construit fără suport pentru sistemul dumneavoastră de ferestre."
+
+#: xfce4-notifyd/main.c:88 xfce4-notifyd/main.c:99 xfce4-notifyd/main.c:111
+#: xfce4-notifyd-config/main.c:1272
+msgid "Xfce Notify Daemon"
+msgstr "Serviciul de notificări Xfce"
+
+#: xfce4-notifyd/main.c:91
+#, c-format
+msgid "Unknown option \"%s\"\n"
+msgstr "Opțiune necunoscută „%s”\n"
+
+#: xfce4-notifyd/main.c:101 xfce4-notifyd/main.c:113
+msgid "Unable to start notification daemon"
+msgstr "Nu s-a putut porni serviciul de notificări"
+
+#: xfce4-notifyd/xfce-notify-daemon.c:590
+msgid "Another notification daemon is running, exiting\n"
+msgstr "Un alt serviciu de notificări este în curs de execuție, se iese\n"
+
+#: xfce4-notifyd/xfce-notify-daemon-log.c:175
+#: xfce4-notifyd/xfce-notify-daemon-log.c:206
+#: xfce4-notifyd/xfce-notify-daemon-log.c:240
+#: xfce4-notifyd/xfce-notify-daemon-log.c:253
+#: xfce4-notifyd/xfce-notify-daemon-log.c:287
+#: xfce4-notifyd/xfce-notify-daemon-log.c:301
+#: xfce4-notifyd/xfce-notify-daemon-log.c:313
+#: xfce4-notifyd/xfce-notify-daemon-log.c:327
+#: xfce4-notifyd/xfce-notify-daemon-log.c:339
+msgid "Log is unavailable"
+msgstr "Jurnalul nu este disponibil"
+
+#: xfce4-notifyd/xfce-notify-daemon-log.c:180
+msgid "Log entry not found"
+msgstr "Intrarea în jurnal nu a fost găsită"
+
+#: xfce4-notifyd/xfce-notify-log.c:235
+#, c-format
+msgid "The notification log directory (%s) is not a directory"
+msgstr "Directorul jurnalului de notificare (%s) nu este un director"
+
+#: xfce4-notifyd/xfce-notify-log.c:247
+#, c-format
+msgid "Failed to open notification log: %s"
+msgstr "Deschiderea jurnalului de notificare a eșuat: %s"
+
+#: xfce4-notifyd/xfce-notify-log.c:331
+#, c-format
+msgid "Failed to prepare SQL statement: %%s (%s)"
+msgstr "Pregătirea instrucțiunii SQL a eșuat: %%s (%s)"
+
+#: xfce4-notifyd/xfce-notify-log.c:360
+msgid "trailing characters at end of statement"
+msgstr "caractere de terminare la sfârșitul instrucțiunii"
+
+#: xfce4-notifyd/xfce-notify-log.c:458
+#, c-format
+msgid "Failed to create 'notifications' table: %s"
+msgstr "Crearea tabelului „notificări” a eșuat: %s"
+
+#: xfce4-notifyd/xfce-notify-log.c:459
+#, c-format
+msgid "Failed to create DB timestamp index: %s"
+msgstr "A eșuat crearea indexului de marcaj temporal al bazei de date: %s"
+
+#: xfce4-notifyd/xfce-notify-log.c:460
+#, c-format
+msgid "Failed to create DB is_read index: %s"
+msgstr "Crearea indexului is_read (este citit) al bazei de date a eșuat: %s"
+
+#: xfce4-notifyd/xfce-notify-window.c:1453
+msgid "Default Action"
+msgstr "Acțiunea implicită"
+
+#: xfce4-notifyd/xfce4-notifyd.desktop.in:4
+msgid "Xfce Notification Daemon"
+msgstr "Servicul de notificare Xfce"
+
+#: xfce4-notifyd-config/main.c:115
+msgid "Notification Preview"
+msgstr "Previzualizare a notificării"
+
+#: xfce4-notifyd-config/main.c:116
+msgid "This is what notifications will look like"
+msgstr "Așa este cum vor arăta notificările"
+
+#: xfce4-notifyd-config/main.c:121
+msgid "Button"
+msgstr "Buton"
+
+#: xfce4-notifyd-config/main.c:128
+msgid "Notification preview failed"
+msgstr "Previzualizarea notificării de test a eșuat"
+
+#: xfce4-notifyd-config/main.c:591
+#, c-format
+msgid ""
+"Are you sure you want to delete notification settings for application "
+"\"%s\"?"
+msgstr "Sunteți sigur că doriți să ștergeți opțiunile de notificare pentru aplicația „%s”?"
+
+#: xfce4-notifyd-config/main.c:595
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:930
+msgid "Delete"
+msgstr "Șterge"
+
+#: xfce4-notifyd-config/main.c:597
+#: xfce4-notifyd-config/xfce4-notifyd-config-known-app.glade:133
+msgid "Forget Application"
+msgstr "Uită aplicația"
+
+#: xfce4-notifyd-config/main.c:697
+msgid "Unspecified applications"
+msgstr "Aplicații nespecificate"
+
+#: xfce4-notifyd-config/main.c:930
+#, c-format
+msgid ""
+"<b>Currently only urgent notifications are shown.</b>\n"
+"Notification logging is %s."
+msgstr "<b>În prezent sunt afișate doar notificările urgente.</b>\nÎnregistrarea notificărilor este %s."
+
+#: xfce4-notifyd-config/main.c:937
+msgid "enabled"
+msgstr "activat"
+
+#: xfce4-notifyd-config/main.c:937
+msgid "disabled"
+msgstr "dezactivat"
+
+#: xfce4-notifyd-config/main.c:1173
+msgid ""
+"<big><b>Currently there are no known applications.</b></big>\n"
+"As soon as an application sends a notification\n"
+"it will appear in this list."
+msgstr "<big><b>În prezent, nu există nicio aplicație cunoscută.</b></big>\nImediat ce o aplicație trimite o notificare\naceasta va apărea în această listă."
+
+#: xfce4-notifyd-config/main.c:1242
+msgid "Released under the terms of the GNU General Public License, version 2\n"
+msgstr "Lansat sub termenii Licenței Publice Generale GNU, versiunea 2\n"
+
+#: xfce4-notifyd-config/main.c:1243
+#, c-format
+msgid "Please report bugs to %s.\n"
+msgstr "Raportați problemele la %s.\n"
+
+#: xfce4-notifyd-config/main.c:1274
+msgid "Settings daemon is unavailable"
+msgstr "Demonul opțiunilor Xfce nu este disponibil"
+
+#: xfce4-notifyd-config/main.c:1376
+msgid "Display version information"
+msgstr "Afișează informațiile despre versiune"
+
+#: xfce4-notifyd-config/main.c:1377
+msgid "Settings manager socket"
+msgstr "Soclul gestionarului de opțiuni"
+
+#: xfce4-notifyd-config/main.c:1377
+msgid "SOCKET_ID"
+msgstr "ID SOCLU"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:176
+msgid ""
+"<big><b>Empty log</b></big>\n"
+"No notifications have been logged yet."
+msgstr "<big><b>Jurnal gol</b></big>\nNu a fost înregistrată nicio notificare încă."
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:195
+msgid "Refresh"
+msgstr "Actualizare"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:196
+msgid "Refresh the notification log"
+msgstr "Actualizați jurnalul de notificări"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:205
+msgid "Clear the notification log"
+msgstr "Golește jurnalul de notificări"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:213
+msgid "Mark All Read"
+msgstr "Marchează toate ca citite"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:214
+msgid "Mark all unread notifications as read"
+msgstr "Marchează toate notificările necitite ca fiind citite"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:222
+msgid "Copy To Clipboard"
+msgstr "Copiază în clipboard"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:223
+msgid "Copy the selected log entries to the clipboard"
+msgstr "Copiază intrările selectate din jurnal în clipboard"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:231
+msgid "Delete Entry"
+msgstr "Șterge intrarea"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:232
+msgid "Deletes the selected log entries"
+msgstr "Șterge intrările de jurnal selectate"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:240
+msgid "Show Log Location"
+msgstr "Afișează locația jurnalului"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:241
+msgid "Shows the location of the log file in the file manager"
+msgstr "Afișează locația fișierului jurnal în gestionarul de fișiere"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:564
+msgid "Mark log entry _read"
+msgstr "Marchează intrarea din jurnal ca _citită"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:771
+msgid "Yesterday and before"
+msgstr "Ieri și anterior"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:925
+msgid "Delete Selected Log Entries"
+msgstr "Șterge intrările de jurnal selectate"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:1200
+msgid "Loading more log entries..."
+msgstr "Se încarcă mai multe intrări din jurnal..."
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:144
+msgid ""
+"The notification service is not running. No notifications will be shown."
+msgstr "Serviciul de notificare nu rulează. Nu vor fi afișate notificări."
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:223
+msgid "<b>Currently only urgent notifications are shown.</b>"
+msgstr "<b>În prezent, sunt afișate doar notificările urgente.</b>"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:309
+msgid "Fade out"
+msgstr "Se estompează"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:322
+msgid "_Slide out"
+msgstr "Gli_sare"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:348
+msgid "Do not disturb"
+msgstr "Activează modul „nu deranja”"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:372
+msgid "<b>Behavior</b>"
+msgstr "<b>Comportament</b>"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:386
+msgid "<b>Animations</b>"
+msgstr "<b>Animații</b>"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:399
+msgid ""
+"By default the notification bubbles will be shown on the display on which "
+"the mouse pointer is located."
+msgstr "În mod implicit, baloanele de notificare vor fi afișate pe ecranul pe care este localizat cursorul mausului."
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:401
+msgid "Show notifications on"
+msgstr "Afișează notificările pe"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:414
+msgid ""
+"The \"Enable event sounds\" setting in the Appearance Settings dialog must "
+"be checked to hear notification sounds"
+msgstr "Opțiunea „ Activează sunetele evenimentelor” din fereastra de dialog «Opțiuni aspect» trebuie bifată pentru a auzi sunetele de notificare"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:416
+msgid "_Mute sounds"
+msgstr "_Dezactivează sunetele"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:443
+msgid "Always show percent-value notifications"
+msgstr "Afișează întotdeauna notificările privind valorile procentuale"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:468
+msgid "When displaying notifications, show"
+msgstr "Când se afișează notificările, afișează"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:482
+msgid "icon, summary, and body"
+msgstr "pictograma, rezumatul și corpul"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:483
+msgid "icon and summary"
+msgstr "pictograma și rezumatul"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:484
+msgid "icon and application name"
+msgstr "pictograma și numele aplicației"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:498
+msgid "monitor with mouse pointer"
+msgstr "monitorul cu cursorul mausului"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:499
+msgid "primary monitor"
+msgstr "monitorul principal"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:500
+msgid "all monitors"
+msgstr "toate monitoarele"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:512
+msgid ""
+"Prevent redundant notifications. If a message with the same summary and body"
+" is already visible on screen, new identical alerts will be suppressed. "
+"Useful for multi-instance applications like chat clients."
+msgstr "Previne notificările redundante. Dacă un mesaj cu același rezumat și corp este deja vizibil pe ecran, noile alerte identice vor fi suprimate. Util pentru aplicații cu mai multe instanțe, cum ar fi clienții de conversație (chat)."
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:514
+msgid "_Suppress duplicate notifications"
+msgstr "_Suprimă notificările duplicate"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:545
+msgid "General"
+msgstr "Generale"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:583
+msgid "seconds"
+msgstr "secunde"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:598
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:861
+msgid "10"
+msgstr "10"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:623
+msgid "_Opacity"
+msgstr "_Opacitate"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:637
+msgid "Default _position"
+msgstr "_Poziția implicită"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:652
+msgid "Top left"
+msgstr "Stânga sus"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:653
+msgid "Bottom left"
+msgstr "Stânga jos"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:654
+msgid "Top right"
+msgstr "Dreapta sus"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:655
+msgid "Bottom right"
+msgstr "Dreapta jos"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:656
+msgid "Top center"
+msgstr "Sus-centru"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:657
+msgid "Bottom center"
+msgstr "Jos-centru"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:687
+msgid "_Theme"
+msgstr "_Temă"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:700
+msgid ""
+"Show the notification summary and body when the notification is a percent "
+"value, such as audio volume or screen brightness"
+msgstr "Afișează rezumatul și corpul notificării atunci când notificarea este o valoare procentuală, cum ar fi volumul audio sau luminozitatea ecranului"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:702
+msgid "Show text with percent _values"
+msgstr "Afișează textul cu _valori procentuale"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:716
+msgid "Date/time _format"
+msgstr "_Formatul datei/orei"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:737
+msgid "Locale default"
+msgstr "Implicit cel local"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:738
+msgid "Relative times"
+msgstr "Timp relativ"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:739
+msgid "ISO8601"
+msgstr "ISO8601"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:740
+msgid "Custom"
+msgstr "Personalizat"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:768
+msgid "Show _Preview"
+msgstr "Afișează _previzualizare"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:794
+msgid "_Disappear after"
+msgstr "_Dispare după"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:812
+msgid ""
+"When creating a notification, applications can request how long they'd like "
+"the notification remain on screen. This setting controls whether or not that"
+" request is honored."
+msgstr "La crearea unei notificări, aplicațiile pot solicita cât timp ar dori ca notificarea să rămână pe ecran. Această opțiune controlează dacă această solicitare este onorată sau nu."
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:814
+msgid "Honor app-requested \"Disappear after\" time"
+msgstr "Onorează timpul „Dispare după” solicitat de aplicație"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:837
+msgid "_Minimum notification width"
+msgstr "Lățimea _minimă a notificării"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:909
+msgid "<b>Per-application notification settings</b>"
+msgstr "<b>Opțiuni de notificare per-aplicație</b>"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:936
+msgid "Applications"
+msgstr "Aplicații"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:955
+msgid "Log notifications"
+msgstr "Înregistrează notificări"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:981
+msgid "only during \"Do not disturb\", or when notification bodies are not shown"
+msgstr "doar în modul „Nu deranja” sau atunci când nu sunt afișate corpurile de la notificare"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:982
+msgid "always"
+msgstr "întotdeauna"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:994
+msgid "Log applications"
+msgstr "Înregistrează aplicațiile"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:1025
+msgid "all"
+msgstr "toate"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:1026
+msgid "all except blocked"
+msgstr "toate, cu excepția celor blocate"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:1027
+msgid "only blocked"
+msgstr "doar cele blocate"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:1039
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:1055
+msgid "The maximum number of entries to be retained in the log."
+msgstr "Numărul maxim de intrări care urmează să fie păstrate în jurnal."
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:1051
+msgid "Maximum number of log entries to keep"
+msgstr "Numărul maxim de intrări în jurnal care trebuie păstrate"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:1080
+msgid "Log"
+msgstr "Jurnal"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config-known-app.glade:27
+msgid "Mute application"
+msgstr "Dezactivează sunetul aplicației"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config-known-app.glade:62
+msgid "Allow urgent notifications"
+msgstr "Permite notificările urgente"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config-known-app.glade:98
+msgid "Include in log"
+msgstr "Include în jurnal"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.desktop.in:5
+msgid "Customize how notifications appear on your screen"
+msgstr "Personalizați cum apar pe ecran notificările"

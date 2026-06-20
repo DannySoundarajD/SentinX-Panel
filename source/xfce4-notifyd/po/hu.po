@@ -1,0 +1,666 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-apps.xfce4-notifyd package.
+# 
+# Translators:
+# Balázs Meskó <meskobalazs@mailbox.org>, 2018
+# Benedek Imre <nucleo@indamail.hu>, 2014
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2010
+# László Varga, 2024
+# saskadaniel, 2023
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce Apps\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2026-01-09 12:57+0100\n"
+"PO-Revision-Date: 2013-07-03 18:39+0000\n"
+"Last-Translator: László Varga, 2024\n"
+"Language-Team: Hungarian (http://app.transifex.com/xfce/xfce-apps/language/hu/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: common/xfce-notify-log-util.c:379
+msgid "Do you really want to clear the notification log?"
+msgstr "Biztos törli az értesítésnaplót?"
+
+#: common/xfce-notify-log-util.c:384
+msgid "Clear notification log"
+msgstr "Értesítésnapló törlése"
+
+#: common/xfce-notify-log-util.c:387
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:878
+msgid "Cancel"
+msgstr "Mégse"
+
+#: common/xfce-notify-log-util.c:389
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:202
+msgid "Clear"
+msgstr "Törlés"
+
+#: common/xfce-notify-log-util.c:406 common/xfce-notify-log-util.c:414
+msgid "include icon cache"
+msgstr "ikongyorsítótár bele vétele"
+
+#: common/xfce-notify-log-util.c:451
+msgid "Now"
+msgstr "Most"
+
+#: panel-plugin/notification-plugin.c:341
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:46
+#: xfce4-notifyd-config/xfce4-notifyd-config.desktop.in:4
+msgid "Notifications"
+msgstr "Értesítések"
+
+#: panel-plugin/notification-plugin-dialogs.c:49
+#, c-format
+msgid "Unable to open the following url: %s"
+msgstr "A következő URL nem nyitható meg: %s"
+
+#: panel-plugin/notification-plugin-dialogs.c:133
+msgid "This is the notification plugin"
+msgstr "Ez az értesítési bővítmény"
+
+#: panel-plugin/notification-plugin-dialogs.c:135
+msgid "Copyright © 2017 Simon Steinbeiß\n"
+msgstr "Copyright © 2017 Simon Steinbeiß\n"
+
+#: panel-plugin/notification-plugin-log.c:151
+msgid "<b>_Do not disturb</b>"
+msgstr "<b>_Ne zavarjanak</b>"
+
+#: panel-plugin/notification-plugin-log.c:355
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:172
+msgid "Unable to open notification log"
+msgstr "Sikertelen az értesítési napló megnyitása"
+
+#: panel-plugin/notification-plugin-log.c:357
+msgid "No unread notifications"
+msgstr "Nincs olvasatlan értesítés"
+
+#: panel-plugin/notification-plugin-log.c:359
+msgid "No notifications"
+msgstr "Nincsenek értesítések"
+
+#: panel-plugin/notification-plugin-log.c:381
+msgid "_Clear log"
+msgstr "_Napló törlése"
+
+#: panel-plugin/notification-plugin-log.c:392
+msgid "_Mark all read"
+msgstr "_Az összes olvasottként jelölése"
+
+#: panel-plugin/notification-plugin-log.c:401
+msgid "_Notification settings…"
+msgstr "Ér_tesítési beállítások…"
+
+#: panel-plugin/notification-plugin-settings.glade:30
+msgid "Notification Plugin Settings"
+msgstr "Értesítési bővítmény beállításai"
+
+#: panel-plugin/notification-plugin-settings.glade:46
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:66
+msgid "_Help"
+msgstr "_Súgó"
+
+#: panel-plugin/notification-plugin-settings.glade:61
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:82
+msgid "_Close"
+msgstr "_Bezárás"
+
+#: panel-plugin/notification-plugin-settings.glade:98
+msgid "Size of icons in menu"
+msgstr ""
+
+#: panel-plugin/notification-plugin-settings.glade:99
+msgid "Size of the icon shown next to each notification listed in the menu"
+msgstr ""
+
+#: panel-plugin/notification-plugin-settings.glade:126
+msgid "Number of notifications to show"
+msgstr "Megjelenítendő értesítések száma"
+
+#: panel-plugin/notification-plugin-settings.glade:154
+msgid "Only show notifications from today"
+msgstr "Csak a mai értesítések megjelenítése"
+
+#: panel-plugin/notification-plugin-settings.glade:178
+msgid "Hide 'Clear log' confirmation dialog"
+msgstr "'Napló tisztítása' párbeszédablak elrejtése"
+
+#: panel-plugin/notification-plugin-settings.glade:202
+msgid "Hide panel button when no unread notifications"
+msgstr "Panel gomb elrejtése, ha nincs nem olvasott értesítés"
+
+#: panel-plugin/notification-plugin-settings.glade:225
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:891
+msgid "Appearance"
+msgstr "Megjelenés"
+
+#: panel-plugin/notification-plugin-settings.glade:242
+msgid "Show in menu"
+msgstr "Megjelenítés a menüben"
+
+#: panel-plugin/notification-plugin-settings.glade:256
+msgid "All notifications"
+msgstr "Összes értesítés"
+
+#: panel-plugin/notification-plugin-settings.glade:257
+msgid "Unread notifications"
+msgstr "Olvasatlan értesítések"
+
+#: panel-plugin/notification-plugin-settings.glade:269
+msgid "Behavior"
+msgstr "Viselkedés"
+
+#: panel-plugin/notification-plugin-settings.glade:286
+msgid "After showing the menu"
+msgstr "Megjelenítés a menü után"
+
+#: panel-plugin/notification-plugin-settings.glade:300
+msgid "Mark all log entries read"
+msgstr "Az összes naplóbejegyzés megjelölése olvasottként"
+
+#: panel-plugin/notification-plugin-settings.glade:301
+msgid "Mark shown log entries read"
+msgstr "Kijelölt naplóbejegyzések olvasottnak jelölése"
+
+#: panel-plugin/notification-plugin-settings.glade:302
+msgid "Do nothing"
+msgstr "Ne csináljon semmit"
+
+#: panel-plugin/notification-plugin.desktop.in:5
+msgid "Notification Plugin"
+msgstr "Értesítési bővítmény"
+
+#: panel-plugin/notification-plugin.desktop.in:6
+msgid "Notification plugin for the Xfce panel"
+msgstr "Értesítési bővítmény az Xfce panelhez"
+
+#: xfce4-notifyd/main.c:62
+msgid ""
+"Your Wayland compositor does not support required protocol wlr-layer-shell."
+msgstr "Az Ön Wayland kompozitora nem támogatja a kötelező wlr-layer-shell protokollt"
+
+#: xfce4-notifyd/main.c:69
+msgid "xfce4-notifyd was built without support for your windowing system."
+msgstr ""
+
+#: xfce4-notifyd/main.c:88 xfce4-notifyd/main.c:99 xfce4-notifyd/main.c:111
+#: xfce4-notifyd-config/main.c:1272
+msgid "Xfce Notify Daemon"
+msgstr "Xfce értesítési démon"
+
+#: xfce4-notifyd/main.c:91
+#, c-format
+msgid "Unknown option \"%s\"\n"
+msgstr "Ismeretlen kapcsoló: „%s”\n"
+
+#: xfce4-notifyd/main.c:101 xfce4-notifyd/main.c:113
+msgid "Unable to start notification daemon"
+msgstr "Az értesítési démon nem indítható"
+
+#: xfce4-notifyd/xfce-notify-daemon.c:590
+msgid "Another notification daemon is running, exiting\n"
+msgstr "Már fut egy értesítési démon, kilépés\n"
+
+#: xfce4-notifyd/xfce-notify-daemon-log.c:175
+#: xfce4-notifyd/xfce-notify-daemon-log.c:206
+#: xfce4-notifyd/xfce-notify-daemon-log.c:240
+#: xfce4-notifyd/xfce-notify-daemon-log.c:253
+#: xfce4-notifyd/xfce-notify-daemon-log.c:287
+#: xfce4-notifyd/xfce-notify-daemon-log.c:301
+#: xfce4-notifyd/xfce-notify-daemon-log.c:313
+#: xfce4-notifyd/xfce-notify-daemon-log.c:327
+#: xfce4-notifyd/xfce-notify-daemon-log.c:339
+msgid "Log is unavailable"
+msgstr "A napló nem érhető el"
+
+#: xfce4-notifyd/xfce-notify-daemon-log.c:180
+msgid "Log entry not found"
+msgstr "Napló bejegyzés nem érhető el"
+
+#: xfce4-notifyd/xfce-notify-log.c:235
+#, c-format
+msgid "The notification log directory (%s) is not a directory"
+msgstr "Az értesítési napló könyvtár (%s) nem egy könyvtár"
+
+#: xfce4-notifyd/xfce-notify-log.c:247
+#, c-format
+msgid "Failed to open notification log: %s"
+msgstr "Hiba az értesítési napló megnyitásakor: %s"
+
+#: xfce4-notifyd/xfce-notify-log.c:331
+#, c-format
+msgid "Failed to prepare SQL statement: %%s (%s)"
+msgstr ""
+
+#: xfce4-notifyd/xfce-notify-log.c:360
+msgid "trailing characters at end of statement"
+msgstr ""
+
+#: xfce4-notifyd/xfce-notify-log.c:458
+#, c-format
+msgid "Failed to create 'notifications' table: %s"
+msgstr "Hiba az 'értesítési' tábla létrehozásakor: %s"
+
+#: xfce4-notifyd/xfce-notify-log.c:459
+#, c-format
+msgid "Failed to create DB timestamp index: %s"
+msgstr "Hiba a DB időbélyeg index létrehozásakor: %s"
+
+#: xfce4-notifyd/xfce-notify-log.c:460
+#, c-format
+msgid "Failed to create DB is_read index: %s"
+msgstr "Hiba a DB is_read index létrehozásakor: %s"
+
+#: xfce4-notifyd/xfce-notify-window.c:1453
+msgid "Default Action"
+msgstr "Alapértelmezett művelet"
+
+#: xfce4-notifyd/xfce4-notifyd.desktop.in:4
+msgid "Xfce Notification Daemon"
+msgstr "Xfce értesítési démon"
+
+#: xfce4-notifyd-config/main.c:115
+msgid "Notification Preview"
+msgstr "Értesítés előnézete"
+
+#: xfce4-notifyd-config/main.c:116
+msgid "This is what notifications will look like"
+msgstr "Az értesítések ilyenek lesznek"
+
+#: xfce4-notifyd-config/main.c:121
+msgid "Button"
+msgstr "Gomb"
+
+#: xfce4-notifyd-config/main.c:128
+msgid "Notification preview failed"
+msgstr "Az értesítés előnézete meghiúsult"
+
+#: xfce4-notifyd-config/main.c:591
+#, c-format
+msgid ""
+"Are you sure you want to delete notification settings for application "
+"\"%s\"?"
+msgstr "Biztos benne, hogy törölni kívánja az applikáció értesítési beálításait \"%s\"?"
+
+#: xfce4-notifyd-config/main.c:595
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:880
+msgid "Delete"
+msgstr "Törlés"
+
+#: xfce4-notifyd-config/main.c:597
+#: xfce4-notifyd-config/xfce4-notifyd-config-known-app.glade:133
+msgid "Forget Application"
+msgstr "Alkalmazás elfelejtése"
+
+#: xfce4-notifyd-config/main.c:697
+msgid "Unspecified applications"
+msgstr "Nem meghatározott alkalmazás"
+
+#: xfce4-notifyd-config/main.c:930
+#, c-format
+msgid ""
+"<b>Currently only urgent notifications are shown.</b>\n"
+"Notification logging is %s."
+msgstr "<b>Jelenleg csak a sürgős értesítések jelennek meg.</b>\nAz értesítésnaplózás %s."
+
+#: xfce4-notifyd-config/main.c:937
+msgid "enabled"
+msgstr "engedélyezve"
+
+#: xfce4-notifyd-config/main.c:937
+msgid "disabled"
+msgstr "tiltva"
+
+#: xfce4-notifyd-config/main.c:1173
+msgid ""
+"<big><b>Currently there are no known applications.</b></big>\n"
+"As soon as an application sends a notification\n"
+"it will appear in this list."
+msgstr "<big><b>Jelenleg nincsenek ismert alkalmazások.</b></big>\nAmint egy alkalmazás értesítést küld,\nmeg fog jelenni ebben a listában."
+
+#: xfce4-notifyd-config/main.c:1242
+msgid "Released under the terms of the GNU General Public License, version 2\n"
+msgstr "Kiadva a GNU General Public License 2-es verziójának feltételei szerint\n"
+
+#: xfce4-notifyd-config/main.c:1243
+#, c-format
+msgid "Please report bugs to %s.\n"
+msgstr "A hibákat itt jelentse: %s\n"
+
+#: xfce4-notifyd-config/main.c:1274
+msgid "Settings daemon is unavailable"
+msgstr "A beállításdémon nem érhető el"
+
+#: xfce4-notifyd-config/main.c:1376
+msgid "Display version information"
+msgstr "Verzióinformációk megjelenítése"
+
+#: xfce4-notifyd-config/main.c:1377
+msgid "Settings manager socket"
+msgstr "Beállításkezelő foglalat"
+
+#: xfce4-notifyd-config/main.c:1377
+msgid "SOCKET_ID"
+msgstr "FOGLALAT_AZONOSÍTÓ"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:174
+msgid ""
+"<big><b>Empty log</b></big>\n"
+"No notifications have been logged yet."
+msgstr "<big><b>Napló ürítése</b></big>\nMég nincsenek naplózott értesítések."
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:193
+msgid "Refresh"
+msgstr "Frissítés"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:194
+msgid "Refresh the notification log"
+msgstr "Értesítésnapló frissítése"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:203
+msgid "Clear the notification log"
+msgstr "Értesítésnapló törlése"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:211
+msgid "Mark All Read"
+msgstr "Az összes olvasottként jelölése"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:212
+msgid "Mark all unread notifications as read"
+msgstr "Minden olvasatlan értesítés olvasottként jelölése"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:220
+msgid "Delete Entry"
+msgstr ""
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:221
+msgid "Deletes the selected log entries"
+msgstr ""
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:229
+msgid "Show Log Location"
+msgstr ""
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:230
+msgid "Shows the location of the log file in the file manager"
+msgstr ""
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:543
+msgid "Mark log entry _read"
+msgstr "Naplóbejegyzés megjelölése _olvasottként"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:749
+msgid "Yesterday and before"
+msgstr "Tegnap és előtte"
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:875
+msgid "Delete Selected Log Entries"
+msgstr ""
+
+#: xfce4-notifyd-config/xfce-notify-log-viewer.c:1149
+msgid "Loading more log entries..."
+msgstr "Több naplóbejegyzés megjelenítése"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:144
+msgid ""
+"The notification service is not running. No notifications will be shown."
+msgstr "Az értesítési szolgáltatás nem fut. Nem lesznek értesítések megjelenítve."
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:223
+msgid "<b>Currently only urgent notifications are shown.</b>"
+msgstr "<b>Jelenleg csak a sürgős értesítések jelennek meg.</b>"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:309
+msgid "Fade out"
+msgstr "Elhalványítás"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:322
+msgid "_Slide out"
+msgstr "_Beúsztatás"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:348
+msgid "Do not disturb"
+msgstr "Ne zavarjanak"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:372
+msgid "<b>Behavior</b>"
+msgstr "<b>Viselkedés</b>"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:386
+msgid "<b>Animations</b>"
+msgstr "<b>Animációk</b>"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:399
+msgid ""
+"By default the notification bubbles will be shown on the display on which "
+"the mouse pointer is located."
+msgstr "Alapértelmezésben az értesítési buborékok azon a kijelzőn lesznek megjelenítve, ahol az egérmutató is található."
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:401
+msgid "Show notifications on"
+msgstr "Értesítések megjelenítése be"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:414
+msgid ""
+"The \"Enable event sounds\" setting in the Appearance Settings dialog must "
+"be checked to hear notification sounds"
+msgstr ""
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:416
+msgid "_Mute sounds"
+msgstr "_Hang némítása"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:443
+msgid "Always show percent-value notifications"
+msgstr "Mindig mutassa a százalékos-érték értesítéseket"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:468
+msgid "When displaying notifications, show"
+msgstr "Ha az értesítés megjelenik, mutassa"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:482
+msgid "icon, summary, and body"
+msgstr ""
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:483
+msgid "icon and summary"
+msgstr ""
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:484
+msgid "icon and application name"
+msgstr ""
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:498
+msgid "monitor with mouse pointer"
+msgstr ""
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:499
+msgid "primary monitor"
+msgstr ""
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:500
+msgid "all monitors"
+msgstr ""
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:512
+msgid ""
+"Prevent redundant notifications. If a message with the same summary and body"
+" is already visible on screen, new identical alerts will be suppressed. "
+"Useful for multi-instance applications like chat clients."
+msgstr ""
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:514
+msgid "_Suppress duplicate notifications"
+msgstr ""
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:545
+msgid "General"
+msgstr "Általános"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:583
+msgid "seconds"
+msgstr "másodperc"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:598
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:861
+msgid "10"
+msgstr "10"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:623
+msgid "_Opacity"
+msgstr "Át_látszatlanság"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:637
+msgid "Default _position"
+msgstr "Alapértelmezett _pozíció"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:652
+msgid "Top left"
+msgstr "Balra fent"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:653
+msgid "Bottom left"
+msgstr "Balra lent"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:654
+msgid "Top right"
+msgstr "Jobbra fent"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:655
+msgid "Bottom right"
+msgstr "Jobbra lent"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:656
+msgid "Top center"
+msgstr "Felül középen"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:657
+msgid "Bottom center"
+msgstr "Alul középen"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:687
+msgid "_Theme"
+msgstr "_Téma"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:700
+msgid ""
+"Show the notification summary and body when the notification is a percent "
+"value, such as audio volume or screen brightness"
+msgstr ""
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:702
+msgid "Show text with percent _values"
+msgstr "Szöveg mutatása százalékos _értékkel"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:716
+msgid "Date/time _format"
+msgstr "Dátum/idő _formátum"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:737
+msgid "Locale default"
+msgstr "Helyi alapértelmezett"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:738
+msgid "Relative times"
+msgstr "Relatív idő"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:739
+msgid "ISO8601"
+msgstr "ISO8601"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:740
+msgid "Custom"
+msgstr "Egyéni"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:768
+msgid "Show _Preview"
+msgstr "_Előnézet megjelenítése"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:794
+msgid "_Disappear after"
+msgstr "El_tüntetés ennyi idő után:"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:812
+msgid ""
+"When creating a notification, applications can request how long they'd like "
+"the notification remain on screen. This setting controls whether or not that"
+" request is honored."
+msgstr ""
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:814
+msgid "Honor app-requested \"Disappear after\" time"
+msgstr ""
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:837
+msgid "_Minimum notification width"
+msgstr "_Értesítés minimum szélessége"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:909
+msgid "<b>Per-application notification settings</b>"
+msgstr "<b>Applikációnkénti értesítési beállítások</b>"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:936
+msgid "Applications"
+msgstr "Alkalmazások"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:955
+msgid "Log notifications"
+msgstr "Értesítések naplózása"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:981
+msgid "only during \"Do not disturb\", or when notification bodies are not shown"
+msgstr ""
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:982
+msgid "always"
+msgstr "mindig"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:994
+msgid "Log applications"
+msgstr "Alkalmazások naplózása"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:1025
+msgid "all"
+msgstr "összes"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:1026
+msgid "all except blocked"
+msgstr "összes, kivéve a blokkoltak"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:1027
+msgid "only blocked"
+msgstr "csak blokkolt"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:1039
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:1055
+msgid "The maximum number of entries to be retained in the log."
+msgstr ""
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:1051
+msgid "Maximum number of log entries to keep"
+msgstr ""
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.glade:1080
+msgid "Log"
+msgstr "Napló"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config-known-app.glade:27
+msgid "Mute application"
+msgstr "Alkalmazás némítása"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config-known-app.glade:62
+msgid "Allow urgent notifications"
+msgstr "Fontos értesítések engedélyezése"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config-known-app.glade:98
+msgid "Include in log"
+msgstr "Naplóbejegyzésbe foglalás"
+
+#: xfce4-notifyd-config/xfce4-notifyd-config.desktop.in:5
+msgid "Customize how notifications appear on your screen"
+msgstr "A képernyőn megjelenő értesítések megjelenésének személyre szabása"

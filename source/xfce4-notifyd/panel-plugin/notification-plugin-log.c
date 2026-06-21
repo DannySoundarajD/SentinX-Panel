@@ -134,7 +134,9 @@ gtk_widget_set_size_request(
     650
 );
 center_widget =
-	sentinx_notification_center_widget();
+	sentinx_notification_center_widget(
+		notification_plugin
+);
 
 gtk_container_add(
     GTK_CONTAINER(container_item),

@@ -90,7 +90,9 @@ notification_plugin_popup_menu(
 );
 
     content =
-        sentinx_notification_center_widget();
+	sentinx_notification_center_widget(
+        notification_plugin
+    );
 
     gtk_container_add(
         GTK_CONTAINER(window),

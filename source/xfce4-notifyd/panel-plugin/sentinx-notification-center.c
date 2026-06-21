@@ -1,5 +1,8 @@
 #include "sentinx-notification-center.h"
 #include <xfconf/xfconf.h>
+#include <common/xfce-notify-log-util.h>
+#include <common/xfce-notify-log-types.h>
+#include <common/xfce-notify-log-gbus.h>
 
 static GtkWidget *window = NULL;
 gboolean
@@ -38,7 +41,7 @@ on_window_delete(GtkWidget *widget,
     return TRUE;
 }
 
-static GtkWidget *
+GtkWidget *
 create_notification_card(
     const gchar *icon,
     const gchar *title_text,
@@ -64,6 +67,7 @@ create_notification_card(
         GTK_CONTAINER(frame),
         box
     );
+
 
     g_snprintf(
         markup,
@@ -111,7 +115,70 @@ create_notification_card(
     return frame;
 }
 
-GtkWidget *sentinx_notification_center_widget(void)
+GtkWidget *
+create_notification_card_from_entry(
+    XfceNotifyLogEntry *entry
+)
+{
+    gchar *body;
+    gchar *summary;
+
+    summary =
+        notify_log_format_summary(
+            entry->summary
+        );
+
+    body =
+        notify_log_format_body(
+            entry->body
+        );
+
+    GtkWidget *card =
+        create_notification_card(
+            "🔔",
+            summary,
+            body ? body : "",
+            ""
+        );
+
+    g_free(summary);
+
+    if (body)
+        g_free(body);
+
+    return card;
+}
+static void
+sentinx_clear_all_notifications(
+    GtkButton *button,
+    gpointer data
+)
+{
+    NotificationPlugin *notification_plugin =
+        data;
+
+    if (
+        notification_plugin != NULL &&
+        notification_plugin->log != NULL
+    )
+    {
+        xfce_notify_log_gbus_call_clear(
+            notification_plugin->log,
+            NULL,
+            NULL,
+            NULL
+        );
+
+        g_print(
+            "ALL NOTIFICATIONS CLEARED\n"
+        );
+    }
+}
+
+GtkWidget *
+sentinx_notification_center_widget(
+    NotificationPlugin *notification_plugin
+)
 {
     g_print("SENTINX WIDGET CREATED\n");
     GtkWidget *paned;
@@ -220,51 +287,81 @@ gtk_paned_set_position(
         GTK_CONTAINER(scroll),
         notif_box
     );
+g_print(
+    "PLUGIN=%p LOG=%p\n",
+    notification_plugin,
+    notification_plugin ?
+        notification_plugin->log : NULL
+);
+    
+if (
+    notification_plugin != NULL &&
+    notification_plugin->log != NULL
+)
+{
+    GVariant *entriesv = NULL;
+    GList *entries = NULL;
+    GError *error = NULL;
 
-    card = create_notification_card(
-        "🌐",
-        "WiFi Connected",
-        "Connected to SentinX-5G",
-        "2m ago"
-    );
+    if (
+        xfce_notify_log_gbus_call_list_sync(
+            notification_plugin->log,
+            "",
+            20,
+            FALSE,
+            &entriesv,
+            NULL,
+            &error
+        )
+    )
+    {
+        entries =
+            notify_log_variant_to_entries(
+                entriesv
+            );
+	g_print(
+    "ENTRIES=%d\n",
+    g_list_length(entries)
+);
 
-    gtk_box_pack_start(
-        GTK_BOX(notif_box),
-        card,
-        FALSE,
-        FALSE,
-        5
-    );
+        g_variant_unref(
+            entriesv
+        );
 
-    card = create_notification_card(
-        "🤖",
-        "Ollama Started",
-        "Qwen Model Loaded",
-        "5m ago"
-    );
+        for (
+            GList *l = entries;
+            l != NULL;
+            l = l->next
+        )
+        {
+XfceNotifyLogEntry *entry =
+                l->data;
+g_print(
+    "ENTRY: %s\n",
+    entry->summary
+);
 
-    gtk_box_pack_start(
-        GTK_BOX(notif_box),
-        card,
-        FALSE,
-        FALSE,
-        5
-    );
+            card =
+                create_notification_card_from_entry(
+                    entry
+                );
 
-    card = create_notification_card(
-        "🛡",
-        "Sentinel Active",
-        "Monitoring System",
-        "10m ago"
-    );
+            gtk_box_pack_start(
+                GTK_BOX(notif_box),
+                card,
+                FALSE,
+                FALSE,
+                5
+            );
+        }
 
-    gtk_box_pack_start(
-        GTK_BOX(notif_box),
-        card,
-        FALSE,
-        FALSE,
-        5
-    );
+        g_list_free_full(
+            entries,
+            (GDestroyNotify)
+            xfce_notify_log_entry_unref
+        );
+    }
+}
 
     footer = gtk_box_new(
         GTK_ORIENTATION_HORIZONTAL,
@@ -340,6 +437,15 @@ gtk_box_pack_start(
     btn_clear = gtk_button_new_with_label(
         "Clear All"
     );
+g_signal_connect(
+    btn_clear,
+    "clicked",
+    G_CALLBACK(
+        sentinx_clear_all_notifications
+    ),
+    notification_plugin
+);
+
 
     gtk_box_pack_end(
         GTK_BOX(footer),
@@ -423,7 +529,9 @@ sentinx_notification_center_create(void)
 g_print("SENTINX WINDOW CREATED\n");
 
 content =
-    sentinx_notification_center_widget();
+    sentinx_notification_center_widget(
+	NULL
+    );
 
     gtk_container_add(
         GTK_CONTAINER(window),

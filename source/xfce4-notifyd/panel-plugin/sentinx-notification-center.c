@@ -34,10 +34,6 @@ xfconf_channel_set_bool(
     "/do-not-disturb",
     state
 );
-    g_print(
-        "DND -> %s\n",
-        !state ? "ON" : "OFF"
-    );
 return FALSE;
 }
 static gboolean
@@ -221,9 +217,6 @@ sentinx_clear_all_notifications(
     );
 }
 
-        g_print(
-            "ALL NOTIFICATIONS CLEARED\n"
-        );
     }
 }
 
@@ -232,7 +225,6 @@ sentinx_notification_center_widget(
     NotificationPlugin *notification_plugin
 )
 {
-    g_print("SENTINX WIDGET CREATED\n");
     GtkWidget *paned;
 
     GtkWidget *left_panel;
@@ -343,12 +335,6 @@ gtk_paned_set_position(
         GTK_CONTAINER(scroll),
         notif_box
     );
-g_print(
-    "PLUGIN=%p LOG=%p\n",
-    notification_plugin,
-    notification_plugin ?
-        notification_plugin->log : NULL
-);
     
 if (
     notification_plugin != NULL &&
@@ -375,10 +361,6 @@ if (
             notify_log_variant_to_entries(
                 entriesv
             );
-	g_print(
-    "ENTRIES=%d\n",
-    g_list_length(entries)
-);
 
         g_variant_unref(
             entriesv
@@ -392,10 +374,6 @@ if (
         {
 XfceNotifyLogEntry *entry =
                 l->data;
-g_print(
-    "ENTRY: %s\n",
-    entry->summary
-);
 
             card =
                 create_notification_card_from_entry(
@@ -639,7 +617,6 @@ sentinx_notification_center_create(void)
             GTK_WINDOW_TOPLEVEL
         );
 
-g_print("SENTINX WINDOW CREATED\n");
 
 content =
     sentinx_notification_center_widget(

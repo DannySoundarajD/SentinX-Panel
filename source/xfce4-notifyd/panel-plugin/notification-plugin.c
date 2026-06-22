@@ -149,7 +149,6 @@ gtk_window_move(
 notification_plugin->popover = window;
 notification_plugin->dropdown_open = TRUE;
 
-g_print("SENTINX WINDOW SHOWN\n");
 
 }
 
@@ -163,7 +162,6 @@ sentinx_window_focus_out(
 
     notification_plugin->dropdown_open = FALSE;
 
-    g_print("WINDOW CLOSED\n");
 
     return FALSE;
 }
@@ -176,7 +174,6 @@ cb_button_pressed (GtkButton *button,
 
 if (event->button == 1)
 {
-g_print("LEFT CLICK DETECTED\n");
     if (notification_plugin->dropdown_open)
     {
         gtk_widget_hide(
@@ -187,7 +184,6 @@ g_print("LEFT CLICK DETECTED\n");
     }
     else
     {
-g_print("OPENING POPOVER\n");        
 notification_plugin_popup_menu(
             notification_plugin
         );

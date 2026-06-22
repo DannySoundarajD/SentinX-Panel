@@ -11,7 +11,33 @@ typedef struct
     GtkWidget *card;
 }
 SentinxNotificationDeleteData;
+static gchar *
+sentinx_load_events(void)
+{
+    gchar *contents = NULL;
 
+    if (
+        g_file_get_contents(
+            g_build_filename(
+                g_get_home_dir(),
+                ".config",
+                "sentinx",
+                "events.txt",
+                NULL
+            ),
+            &contents,
+            NULL,
+            NULL
+        )
+    )
+    {
+        return contents;
+    }
+
+    return g_strdup(
+        "No Events"
+    );
+}
 static GtkWidget *window = NULL;
 gboolean
 sentinx_toggle_dnd(
@@ -572,11 +598,15 @@ g_signal_connect(
         "Today"
     );
 
-events_label = gtk_label_new(
-    "18:00  Sprint Review\n"
-    "20:30  AI Meeting\n"
-    "22:00  SentinX Development"
-);
+gchar *events_text =
+    sentinx_load_events();
+
+events_label =
+    gtk_label_new(
+        events_text
+    );
+
+g_free(events_text);
 
     gtk_container_add(
         GTK_CONTAINER(events_frame),

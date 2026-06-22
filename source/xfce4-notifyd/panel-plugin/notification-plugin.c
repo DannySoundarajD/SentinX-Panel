@@ -436,6 +436,51 @@ notification_plugin_init_log_proxy(NotificationPlugin *notification_plugin) {
 }
 
 
+static gboolean
+
+sentinx_update_clock(
+    gpointer data
+)
+{
+    NotificationPlugin *notification_plugin =
+        data;
+
+    GDateTime *now =
+        g_date_time_new_now_local();
+
+    gchar *date_text =
+        g_date_time_format(
+            now,
+            "%d %b"
+        );
+
+    gchar *time_text =
+        g_date_time_format(
+            now,
+            "%H:%M"
+        );
+
+    gtk_label_set_text(
+        GTK_LABEL(
+            notification_plugin->date_label
+        ),
+        date_text
+    );
+
+    gtk_label_set_text(
+        GTK_LABEL(
+            notification_plugin->time_label
+        ),
+        time_text
+    );
+
+    g_free(date_text);
+    g_free(time_text);
+
+    g_date_time_unref(now);
+
+    return TRUE;
+}
 
 static NotificationPlugin *
 notification_plugin_new (XfcePanelPlugin *panel_plugin)
@@ -463,9 +508,63 @@ notification_plugin->plugin = panel_plugin;
   xfce_panel_plugin_set_small (panel_plugin, TRUE);
   notification_plugin->button = xfce_panel_create_toggle_button ();
   gtk_widget_set_tooltip_text (GTK_WIDGET (notification_plugin->button), _("Notifications"));
-  notification_plugin->image = gtk_image_new ();
+notification_plugin->clock_box =
+    gtk_box_new(
+        GTK_ORIENTATION_HORIZONTAL,
+        4
+    );
 
-  gtk_container_add (GTK_CONTAINER (notification_plugin->button), notification_plugin->image);
+notification_plugin->image =
+    gtk_image_new();
+
+notification_plugin->time_label =
+    gtk_label_new("");
+
+GtkWidget *separator =
+    gtk_label_new("|");
+
+notification_plugin->date_label =
+    gtk_label_new("");
+
+
+gtk_box_pack_start(
+    GTK_BOX(notification_plugin->clock_box),
+    notification_plugin->image,
+    FALSE,
+    FALSE,
+    0
+);
+
+gtk_box_pack_start(
+    GTK_BOX(notification_plugin->clock_box),
+    notification_plugin->time_label,
+    FALSE,
+    FALSE,
+    0
+);
+
+gtk_box_pack_start(
+    GTK_BOX(notification_plugin->clock_box),
+    separator,
+    FALSE,
+    FALSE,
+    0
+);
+
+gtk_box_pack_start(
+    GTK_BOX(notification_plugin->clock_box),
+    notification_plugin->date_label,
+    FALSE,
+    FALSE,
+    0
+);
+
+gtk_container_add(
+    GTK_CONTAINER(
+        notification_plugin->button
+    ),
+    notification_plugin->clock_box
+);
   gtk_widget_show_all (GTK_WIDGET (notification_plugin->button));
 
   gtk_widget_set_name(GTK_WIDGET (notification_plugin->button), "xfce4-notification-button");
@@ -538,6 +637,15 @@ notification_plugin_size_changed (XfcePanelPlugin       *plugin,
 
   notification_plugin->icon_size = xfce_panel_plugin_get_icon_size(plugin);
   notification_plugin_update_icon(notification_plugin);
+sentinx_update_clock(
+    notification_plugin
+);
+
+g_timeout_add_seconds(
+    60,
+    sentinx_update_clock,
+    notification_plugin
+);
 
   return TRUE;
 }

@@ -65,6 +65,9 @@ typedef struct
     /* panel widgets */
     GtkWidget       *button;
     GtkWidget       *image;
+GtkWidget *time_label;
+GtkWidget *clock_box;
+GtkWidget *date_label;	
 
     /* menu widgets */
 GtkWidget *do_not_disturb_switch;

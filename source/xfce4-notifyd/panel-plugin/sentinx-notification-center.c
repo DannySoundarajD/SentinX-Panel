@@ -572,9 +572,11 @@ g_signal_connect(
         "Today"
     );
 
-    events_label = gtk_label_new(
-        "No Events"
-    );
+events_label = gtk_label_new(
+    "18:00  Sprint Review\n"
+    "20:30  AI Meeting\n"
+    "22:00  SentinX Development"
+);
 
     gtk_container_add(
         GTK_CONTAINER(events_frame),

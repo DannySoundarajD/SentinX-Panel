@@ -75,6 +75,7 @@ gboolean dropdown_open;
 /* SentinX notification center */
 GtkWidget *center_widget;
 GtkWidget *active_menu;
+GtkWidget *notif_box;
 
     /* handlers */
     guint            menu_size_allocate_next_handler;

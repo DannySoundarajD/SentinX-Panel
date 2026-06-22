@@ -61,8 +61,13 @@ notification_plugin_popup_menu(
 {
     GtkWidget *window;
     GtkWidget *content;
-    GdkScreen *screen;
-    gint screen_width;
+GdkWindow *button_window;
+GdkDisplay *display;
+GdkMonitor *monitor;
+
+GdkRectangle geometry;
+
+gint center_x;
 
     window =
         gtk_window_new(GTK_WINDOW_TOPLEVEL);
@@ -104,28 +109,48 @@ notification_plugin_popup_menu(
         900,
         650
     );
+gtk_widget_show_all(window);
 
-    gtk_widget_show_all(window);
-
-    gtk_window_present(
+gtk_window_present(
     GTK_WINDOW(window)
 );
 
-    screen = gdk_screen_get_default();
-
-    screen_width =
-        gdk_screen_get_width(screen);
-
-    gtk_window_move(
-        GTK_WINDOW(window),
-        (screen_width - 900) / 2,
-        40
+button_window =
+    gtk_widget_get_window(
+        notification_plugin->button
     );
 
-    notification_plugin->popover = window;
-    notification_plugin->dropdown_open = TRUE;
+display =
+    gdk_window_get_display(
+        button_window
+    );
 
-    g_print("SENTINX WINDOW SHOWN\n");
+monitor =
+    gdk_display_get_monitor_at_window(
+        display,
+        button_window
+    );
+
+gdk_monitor_get_geometry(
+    monitor,
+    &geometry
+);
+
+center_x =
+    geometry.x +
+    ((geometry.width - 900) / 2);
+
+gtk_window_move(
+    GTK_WINDOW(window),
+    center_x,
+    40
+);
+
+notification_plugin->popover = window;
+notification_plugin->dropdown_open = TRUE;
+
+g_print("SENTINX WINDOW SHOWN\n");
+
 }
 
 static gboolean

@@ -4,6 +4,14 @@
 #include <common/xfce-notify-log-types.h>
 #include <common/xfce-notify-log-gbus.h>
 
+typedef struct
+{
+    NotificationPlugin *plugin;
+    gchar *id;
+    GtkWidget *card;
+}
+SentinxNotificationDeleteData;
+
 static GtkWidget *window = NULL;
 gboolean
 sentinx_toggle_dnd(
@@ -115,6 +123,37 @@ create_notification_card(
     return frame;
 }
 
+static void
+sentinx_delete_notification(
+    GtkButton *button,
+    gpointer data
+)
+{
+    SentinxNotificationDeleteData *delete_data =
+        data;
+
+    const gchar *ids[2];
+
+    ids[0] = delete_data->id;
+    ids[1] = NULL;
+
+    xfce_notify_log_gbus_call_mark_read(
+        delete_data->plugin->log,
+        ids,
+        NULL,
+        NULL,
+        NULL
+    );
+
+    gtk_widget_destroy(
+        delete_data->card
+    );
+
+    g_free(delete_data->id);
+    g_free(delete_data);
+}
+
+
 GtkWidget *
 create_notification_card_from_entry(
     XfceNotifyLogEntry *entry
@@ -168,6 +207,19 @@ sentinx_clear_all_notifications(
             NULL,
             NULL
         );
+	if (
+    notification_plugin->notif_box
+)
+{
+    gtk_container_foreach(
+        GTK_CONTAINER(
+            notification_plugin->notif_box
+        ),
+        (GtkCallback)
+        gtk_widget_destroy,
+        NULL
+    );
+}
 
         g_print(
             "ALL NOTIFICATIONS CLEARED\n"
@@ -282,7 +334,11 @@ gtk_paned_set_position(
         GTK_ORIENTATION_VERTICAL,
         10
     );
-
+	if (notification_plugin != NULL)
+{
+    notification_plugin->notif_box =
+        notif_box;
+}
     gtk_container_add(
         GTK_CONTAINER(scroll),
         notif_box
@@ -345,10 +401,67 @@ g_print(
                 create_notification_card_from_entry(
                     entry
                 );
+		GtkWidget *card_box;
+GtkWidget *delete_button;
+
+SentinxNotificationDeleteData *delete_data;
+
+card_box =
+    gtk_box_new(
+        GTK_ORIENTATION_HORIZONTAL,
+        5
+    );
+
+delete_button =
+    gtk_button_new_with_label(
+        "✕"
+    );
+
+delete_data =
+    g_new0(
+        SentinxNotificationDeleteData,
+        1
+    );
+
+delete_data->plugin =
+    notification_plugin;
+
+delete_data->id =
+    g_strdup(
+        entry->id
+    );
+
+delete_data->card =
+    card_box;
+
+g_signal_connect(
+    delete_button,
+    "clicked",
+    G_CALLBACK(
+        sentinx_delete_notification
+    ),
+    delete_data
+);
+
+gtk_box_pack_start(
+    GTK_BOX(card_box),
+    card,
+    TRUE,
+    TRUE,
+    0
+);
+
+gtk_box_pack_end(
+    GTK_BOX(card_box),
+    delete_button,
+    FALSE,
+    FALSE,
+    0
+);
 
             gtk_box_pack_start(
-                GTK_BOX(notif_box),
-                card,
+GTK_BOX(notif_box),
+    card_box,
                 FALSE,
                 FALSE,
                 5
